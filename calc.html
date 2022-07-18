@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/calculator.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="section-calculator">
+		<div class="container">
+			<div class="calc__body">
+				<div class="calc__body-content">
+					<div class="calc__title">
+						<div class="clac__title-subtitle">
+							<h2><span>Калькулятор</span> финансовых результатов</h2>
+						</div>
+						<div class="clac__titile-descrioption">
+							<p>Расчёт чистой прибыли при рентабельности бизнес-модели 20%.</p>
+						</div>
+					</div>
+					<div class="calc__calculator">
+						<div class="calc__calculator-content">
+							<div class="calc__calculator-item">
+								<label class="calc__calculator-title">
+									<div class="elips"></div>
+									<p>01. Продажа услуг для лица </p>
+								</label>
+								<div class="calc__calculator-range">
+									<input type="range" id="square-range" class="range__input slider01" min="300" max="500"
+										step="50" value="350" oninput="customSlider(value)">
+									<div class="slider-thumb thumb01"></div>
+									<output for="square-range" class="tooltip">
+										<div class="tooltip-value-01">300</div>
+										<div class="tooltip-value-01">350</div>
+										<div class="tooltip-value-01">400</div>
+										<div class="tooltip-value-01">450</div>
+										<div class="tooltip-value-01">500</div>
+									</output>
+									<div class="progress point01"></div>
+								</div>
+							</div>
+							<div class="calc__calculator-item">
+								<label class="calc__calculator-title">
+									<div class="elips"></div>
+									<p>02. Продажа услуг массажа тела</p>
+								</label>
+								<div class="calc__calculator-range">
+									<input type="range" id="square-range02" class="range__input slider02" min="20" max="40" step="5"
+										value="25" oninput="customSlider(value)">
+									<div class="slider-thumb thumb02"></div>
+									<output for="square-range02" class="tooltip">
+										<div class="tooltip-value-01">20</div>
+										<div class="tooltip-value-01">25</div>
+										<div class="tooltip-value-01">30</div>
+										<div class="tooltip-value-01">35</div>
+										<div class="tooltip-value-01">40</div>
+									</output>
+									<div class="progress point02"></div>
+								</div>
+							</div>
+							<div class="calc__calculator-item">
+								<label class="calc__calculator-title">
+									<div class="elips"></div>
+									<p>03. Продажа товаров </p>
+								</label>
+								<div class="calc__calculator-range">
+									<input type="range" id="square-range" class="range__input slider03" min="10" max="30" step="5"
+										value="15" oninput="customSlider(value)">
+									<div class="slider-thumb thumb03"></div>
+									<output for="square-range" class="tooltip">
+										<div class="tooltip-value-01">10</div>
+										<div class="tooltip-value-01">15</div>
+										<div class="tooltip-value-01">20</div>
+										<div class="tooltip-value-01">25</div>
+										<div class="tooltip-value-01">30</div>
+									</output>
+									<div class="progress point03"></div>
+								</div>
+							</div>
+							<div class="calc__calculator-item">
+								<label class="calc__calculator-title">
+									<div class="elips"></div>
+									<p>04. Количество студий </p>
+								</label>
+								<div class="calc__calculator-range">
+									<input type="range" id="square-range" class="range__input slider04" min="1" max="3" step="1"
+										value="1" oninput="customSlider(value)">
+									<div class="slider-thumb thumb04"></div>
+									<output for="square-range" class="tooltip">
+										<div class="tooltip-value-01">1</div>
+										<div class="tooltip-value-01">2</div>
+										<div class="tooltip-value-01">3</div>
+									</output>
+									<div class="progress point04"></div>
+								</div>
+							</div>
+						</div>
+						<div class="calc__calculator-footer">
+							<p><span>Чистая прибыль за месяц </span> <span class="line"></span> <span class="result"></span> руб.
+							</p>
+						</div>
+					</div>
+					<div class="calc__descrioption">
+						<p>Откройте бьюти-бизнес с высокими финансовыми показателями. Получите план выхода на прибыль <span
+								class="result02"></span> рублей</p>
+					</div>
+					<div class="calc__btn"><button class="form__button" type="submit">Получить бизнес-план</button></div>
+				</div>
+				<img class="clac__img" src="./img/calculator/calc.svg" alt="clac">
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/calculator.js"></script>
+</body>
+</html>
