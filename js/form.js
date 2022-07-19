@@ -37,16 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalFormFirst = document.querySelector(".modal__form-first");
   const modalFormSecond = document.querySelector(".modal__form-second");
   const modalFormThird = document.querySelector(".modal__form-third");
+  const modalFormPhone = document.querySelector(".modal__form-phone");
 
 
   form.addEventListener("submit", formSend);
   modalFormFirst.addEventListener("submit", firstModalFormSend);
   modalFormSecond.addEventListener("submit", secondModalFormSend);
   modalFormThird.addEventListener("submit", thirdModalFormSend);
+  modalFormPhone.addEventListener("submit", phoneModalFormSend);
+  
   function formSend(e) {
     e.preventDefault();
-
     let error = formValidate(form, "._req");
+    console.log(error.length);
     if (error === 0) {
       form.reset();
     }
@@ -70,6 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let error = formValidate(modalFormThird, "._third");
     if (error === 0) {
         modalFormThird.reset();
+    }
+  }
+  function phoneModalFormSend(e) {
+    e.preventDefault();
+    let error = formValidate(modalFormPhone, "._phone");
+    if (error === 0) {
+        modalFormPhone.reset();
     }
   }
 
