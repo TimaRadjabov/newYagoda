@@ -1646,6 +1646,7 @@
                           step="50"
                           value="350"
                           oninput="customSlider(value)"
+								  onmousemove="customSlider(value)"
                         />
                         <div class="slider-thumb thumb01"></div>
                         <output for="square-range" class="tooltip">
@@ -2043,70 +2044,5 @@
       id="yamapsapi-js"
     ></script>
 	 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <div class="popup" id="popup">
-      <div class="body__popup">
-         <div class="popup__content">
-            <button class="modal__close"></button>
-            <div class="popup__title">Получите презентацию франшизы, финмодель и бизнес-план</div>
-            <div class="popup__descr"></div>
-            <div class="popup__form">
-               <form action="#" class="modal__form-first">
-                  <div class="form__item">
-                    <img src="./img/form/phone.svg" alt="phone-icon" class="form__input-img" />
-                    <input
-                      type="tel"
-                      name="phone"
-                      class="form__input _first _phone"
-                      placeholder="+7(___) ___ ____"
-                      data-slots="_"
-                    />
-                  </div>
-                  <div class="form__item">
-                    <img src="./img/form/email.svg" alt="email-icon" class="form__input-img" />
-                    <input
-                      type="email"
-                      name="email"
-                      class="form__input _first _email"
-                      placeholder="bestpartner@yagoda.me"
-                    />
-                  </div>
-                  <div class="form__item">
-                    <img src="./img/form/person.svg" alt="person-icon" class="form__input-img" />
-                    <input
-                      type="text"
-                      name="name"
-                      class="form__input _first _name"
-                      placeholder="Елена Плескова"
-                    />
-                  </div>
-                  <input
-                           type="text"
-                           name="section-name-text"
-                           value="Получите презентацию франшизы, финмодель и бизнес-план"
-                           hidden
-                         />
-                         <input
-                           type="text"
-                           name="section-btn-text"
-                           value="Получить информацию"
-                           hidden
-                         />
-                         <input
-                           type="text"
-                           name="section-name"
-                           value="Закрытая"
-                           hidden
-                         />
-                  <div class="main__button">
-                       <button class="form__button btn" type="submit">
-                        Получить информацию
-                       </button>
-                       <div class="button__effect"></div>
-                     </div>
-                </form>
-            </div>
-         </div>
-      </div>
-   </div>
   </body>
 </html>
