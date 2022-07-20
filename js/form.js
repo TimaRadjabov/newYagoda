@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     if (error === 0) {
-      let data = new FormData(form); 
-      console.log(data.getAll("name"));
+      let data = new FormData(modalFormFirst); 
+      localStorage.setItem("nameClient", data.get("name"));
       modalFormFirst.reset();
-     /*  window.location.href =
-          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html"; */
+      window.location.href =
+          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
     }
   }
   function secondModalFormSend(e) {
