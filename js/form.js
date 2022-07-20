@@ -1,4 +1,3 @@
-"use strict";
 document.addEventListener("DOMContentLoaded", function () {
   for (const el of document.querySelectorAll("[placeholder][data-slots]")) {
     const pattern = el.getAttribute("placeholder"),
@@ -39,47 +38,75 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalFormThird = document.querySelector(".modal__form-third");
   const modalFormPhone = document.querySelector(".modal__form-phone");
 
+  
 
-  form.addEventListener("submit", formSend);
+
+  /* form.addEventListener("submit", formSend); */
   modalFormFirst.addEventListener("submit", firstModalFormSend);
   modalFormSecond.addEventListener("submit", secondModalFormSend);
   modalFormThird.addEventListener("submit", thirdModalFormSend);
   modalFormPhone.addEventListener("submit", phoneModalFormSend);
-  
-  function formSend(e) {
+
+  async function formSend(e) {
     e.preventDefault();
     let error = formValidate(form, "._req");
-    console.log(error.length);
     if (error === 0) {
-      form.reset();
+     /*  let response = await fetch("formProcessor.php", {
+        method: "POST",
+        body: formData,
+      }); */
+    let data = new FormData(form); 
+      console.log(data.get("name"));
+      window.location.href =
+          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
+        form.reset();
+      /* if (response.ok) {
+        let result = await response.json();
+        console.log(result);
+        
+      } else {
+        console.log("error");
+      } */
     }
   }
   function firstModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormFirst, "._first");
+    
+
     if (error === 0) {
-        modalFormFirst.reset();
+      let data = new FormData(form); 
+      console.log(data.getAll("name"));
+      modalFormFirst.reset();
+     /*  window.location.href =
+          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html"; */
     }
   }
   function secondModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormSecond, "._second");
     if (error === 0) {
-        modalFormSecond.reset();
+      let data = new FormData(form); 
+      modalFormSecond.reset();
+      window.location.href =
+          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
     }
   }
   function thirdModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormThird, "._third");
     if (error === 0) {
-        modalFormThird.reset();
+      let data = new FormData(form); 
+      modalFormThird.reset();
+      window.location.href =
+          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
     }
   }
   function phoneModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormPhone, "._phone");
     if (error === 0) {
-        modalFormPhone.reset();
+      modalFormPhone.reset();
     }
   }
 

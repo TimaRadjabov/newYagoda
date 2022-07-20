@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap"
       rel="stylesheet"
     />
@@ -23,9 +27,9 @@
           <div class="header__body">
             <div class="header__logo logo">
               <div class="logo__block">
-                <img src="./img/header/logo.svg" alt="logo" class="logo__img" />
+                <img src="./img/header/logo.png" alt="logo" class="logo__img" />
                 <img
-                  src="./img/header/logo-text.svg"
+                  src="./img/header/header-text.png"
                   alt="logo"
                   class="logo__img-text"
                 />
@@ -113,15 +117,12 @@
                     <img src="./img/main/arrow.svg" alt="arrow" />
                   </div>
                 </div>
-                <div class="main__button">
-                  <button
-                    class="main__btn btn popup__link"
-                    type="button"
-                    data-id="#first"
-                  >
-                    Получить презентацию
-                  </button>
-                  <div class="button__effect"></div>
+                <div class="button__container">
+                  <div class="main__button popup__link" data-id="#first">
+                    <button class="btn" type="button">
+                      Получить презентацию
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,13 +187,11 @@
                 </div>
                 <div class="team__background">
                   <img
-                    data-src="./img/category/girls-background.jpg"
-                    src=""
+                    src="./img/category/girls-background.jpg"
                     alt="girls-background"
                   />
                   <img
-                    data-src="./img/category/girls.svg"
-                    src="/"
+                    src="./img/category/1.png"
                     alt="girls"
                     class="team__girls"
                   />
@@ -209,8 +208,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/01.svg"
-                        src="/"
+                        src="./img/category/01.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -224,8 +222,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/02.svg"
-                        src="/"
+                        src="./img/category/02.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -240,8 +237,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/03.svg"
-                        src="/"
+                        src="./img/category/03.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -256,8 +252,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/04.svg"
-                        src="/"
+                        src="./img/category/04.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -272,8 +267,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/05.svg"
-                        src="/"
+                        src="./img/category/05.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -288,8 +282,7 @@
                   <div class="clients__item">
                     <div class="clients__circle">
                       <img
-                        data-src="./img/category/06.svg"
-                        src="/"
+                        src="./img/category/06.svg"
                         alt="icon"
                         class="clients__icon"
                       />
@@ -315,18 +308,6 @@
                 >
                 что обеспечивает студии стабильный оборот в любое время года.
               </h2>
-              <img
-                data-src="./img/flyer/device.svg"
-                src="/"
-                alt="device"
-                class="flyer__device"
-              />
-              <img
-                data-src="./img/flyer/tube.svg"
-                src="/"
-                alt="tube"
-                class="flyer__tube"
-              />
             </div>
           </div>
         </section>
@@ -347,40 +328,93 @@
               </p>
               <div class="gallery__photos">
                 <figure class="gallery__item first">
-                  <img data-src="./img/gallery/01.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/01.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/01.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item second">
-                  <img data-src="./img/gallery/02.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/02.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/02.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item third">
-                  <img data-src="./img/gallery/03.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/03.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/03.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item fourth">
-                  <img data-src="./img/gallery/04.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/04.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/04.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item fifth">
-                  <img data-src="./img/gallery/05.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/05.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/05.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item sixth">
-                  <img data-src="./img/gallery/06.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/06.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/06.jpg" alt="photo" />
+                  </a>
                 </figure>
                 <figure class="gallery__item seventh">
-                  <img data-src="./img/gallery/07.jpg" src="/" alt="photo" />
+                  <a
+                    href="./img/gallery/07.jpg"
+                    data-fancybox="images"
+                    data-caption=""
+                    data-width="1000"
+                    data-height="700"
+                  >
+                    <img src="./img/gallery/07.jpg" alt="photo" />
+                  </a>
                 </figure>
               </div>
               <p class="gallery__more">
                 Узнайте больше о нюансах бизнеса на рынке эстетической медицины
                 Получите презентацию франшизы и бизнес-план
               </p>
-              <div class="main__button gallery__button">
-                <button
-                  class="gallery__btn btn popup__link"
-                  type="button"
-                  data-id="#second"
-                >
-                  Получить презентацию
-                </button>
-                <div class="button__effect gallery__effect"></div>
+              <div class="button__container gallery__button-container">
+                <div class="main__button popup__link" data-id="#second">
+                  <button class="btn" type="button">
+                    Получить презентацию
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -424,12 +458,7 @@
                 </div>
               </div>
               <div class="about__owner">
-                <img
-                  data-src="./img/about/owner.svg"
-                  src="/"
-                  alt="owner"
-                  class=""
-                />
+                <img src="./img/about/owner.png" alt="owner" />
                 <div class="owner__card">
                   <div class="owner__intro">
                     Елена Игоревна Плескова, основатель компании.
@@ -461,8 +490,7 @@
                     <div class="facts__icon">
                       <div class="facts__circle clients__circle">
                         <img
-                          data-src="./img/facts/tick.svg"
-                          src="/"
+                          src="./img/facts/tick.jpg"
                           alt="icon"
                           class="clients__icon"
                         />
@@ -479,8 +507,7 @@
                     <div class="facts__icon">
                       <div class="facts__circle clients__circle">
                         <img
-                          data-src="./img/facts/tick.svg"
-                          src="/"
+                          src="./img/facts/tick.jpg"
                           alt="icon"
                           class="clients__icon"
                         />
@@ -497,7 +524,7 @@
                     <div class="facts__icon">
                       <div class="facts__circle clients__circle">
                         <img
-                          data-src="./img/facts/tick.svg"
+                          src="./img/facts/tick.jpg"
                           alt="icon"
                           class="clients__icon"
                         />
@@ -513,7 +540,7 @@
                     <div class="facts__icon">
                       <div class="facts__circle clients__circle">
                         <img
-                          src="./img/facts/tick.svg"
+                          src="./img/facts/tick.jpg"
                           alt="icon"
                           class="clients__icon"
                         />
@@ -532,24 +559,21 @@
                     спрос на услуги за 2021 год вырос на 30%
                   </p>
                 </div>
-                <div class="facts__button">
-                  <div class="main__button">
-                    <button
-                      class="facts__btn btn popup__link"
-                      type="button"
-                      data-id="#first"
-                    >
-                      Получить презентацию
-                    </button>
-                    <div class="button__effect facts__effect"></div>
+                <div class="facts__button-margin">
+                  <div class="button__container facts__button-container">
+                    <div class="main__button popup__link" data-id="#first">
+                      <button class="btn" type="button">
+                        Получить презентацию
+                      </button>
+                    </div>
                   </div>
                 </div>
+                <img
+                  src="./img/facts/person.png"
+                  alt="person"
+                  class="facts__person"
+                />
               </div>
-              <img
-                src="./img/facts/person.svg"
-                alt="person"
-                class="facts__person"
-              />
             </div>
           </div>
         </section>
@@ -680,19 +704,25 @@
                     </div>
                     <div class="item__photos">
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/1_01.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/1_01.jpg"
+                          data-fancybox="images-2"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/1_01.jpg" alt="face" />
+                        </a>
                       </div>
-                      <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/1_02.jpg"
-                          src="/"
-                          alt="face"
-                        />
-                      </div>
+                      <a
+                        href="./img/tabs/1_02.jpg"
+                        data-fancybox="images-2"
+                        data-caption=""
+                        data-width="1000"
+                        data-height="700"
+                      >
+                        <img src="./img/tabs/1_02.jpg" alt="face" />
+                      </a>
                     </div>
                   </div>
                   <div class="tabs__item" id="tab2">
@@ -802,18 +832,26 @@
                     </div>
                     <div class="item__photos">
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/2_01.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/2_01.jpg"
+                          data-fancybox="images-3"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/2_01.jpg" alt="face" />
+                        </a>
                       </div>
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/2_02.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/2_02.jpg"
+                          data-fancybox="images-3"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/2_02.jpg" alt="face" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -858,18 +896,26 @@
                     </div>
                     <div class="item__photos">
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/3_01.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/3_01.jpg"
+                          data-fancybox="images-4"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/3_01.jpg" alt="face" />
+                        </a>
                       </div>
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/3_02.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/3_02.jpg"
+                          data-fancybox="images-4"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/3_02.jpg" alt="face" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -936,18 +982,26 @@
                     </div>
                     <div class="item__photos">
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/4_01.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/4_01.jpg"
+                          data-fancybox="images-5"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/4_01.jpg" alt="face" />
+                        </a>
                       </div>
                       <div class="item__photo">
-                        <img
-                          data-src="./img/tabs/4_02.jpg"
-                          src="/"
-                          alt="face"
-                        />
+                        <a
+                          href="./img/tabs/4_02.jpg"
+                          data-fancybox="images-5"
+                          data-caption=""
+                          data-width="1000"
+                          data-height="700"
+                        >
+                          <img src="./img/tabs/4_02.jpg" alt="face" />
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -1232,8 +1286,7 @@
                 <div class="masters__card">
                   <div class="card__title">
                     <img
-                      data-src="./img/masters/Olga.svg"
-                      src="/"
+                      src="./img/masters/Olga.png"
                       alt="Olga"
                       class="card__photo"
                     />
@@ -1254,8 +1307,7 @@
                 <div class="masters__card">
                   <div class="card__title">
                     <img
-                      data-src="./img/masters/Slava.svg"
-                      src="/"
+                      src="./img/masters/Slava.png"
                       alt="Vlada"
                       class="card__photo"
                     />
@@ -1283,14 +1335,13 @@
                 модели, как достичь высокой конверсии
               </p>
               <div class="masters__button">
-                <button
-                  class="main__btn btn popup__link"
-                  type="button"
-                  data-id="#second"
-                >
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+                <div class="button__container masters__button-container">
+                  <div class="main__button popup__link" data-id="#second">
+                    <button class="btn" type="button">
+                      Получить информацию
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1763,15 +1814,14 @@
                     <span class="result02"></span> рублей
                   </p>
                 </div>
-                <div class="calc__button">
-                  <button
-                    class="main__btn btn popup__link"
-                    type="button"
-                    data-id="#first"
-                  >
-                    Получить презентацию
-                  </button>
-                  <div class="button__effect"></div>
+                <div class="calculator__button">
+                  <div class="button__container calc__button-container">
+                    <div class="main__button popup__link" data-id="#first">
+                      <button class="btn" type="button">
+                        Получить презентацию
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1964,10 +2014,13 @@
                       hidden
                     />
                     <div class="info__button">
-                      <button class="info__btn btn" type="submit">
-                        Получить презентацию
-                      </button>
-                      <div class="button__effect"></div>
+                      <div class="button__container info__button-container">
+                        <div class="main__button info__btn">
+                          <button class="btn btn-info" type="submit">
+                            Записаться на консультацию
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -1987,60 +2040,71 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__body">
-          <div class="footer__info">
-            <p class="footer__info-data">© Yagoda, 2019 - 2022 г.</p>
-            <p class="footer__info-property">
-              ИП Плескова Елена Игоревна, ИНН 781306731722
-            </p>
-            <div class="footer__info-location">
+          <div class="footer__first-block">
+            <div class="footer__date">
+              <div class="date__name">© Yagoda,</div>
+              <div class="date__date">2019 - 2022 г.</div>
+            </div>
+            <div class="footer__owner">
+              <div class="owner__name">ИП Плескова Елена Игоревна,</div>
+              <div class="owner__ident">ИНН 781306731722</div>
+            </div>
+            <div class="footer__country">
               <img
-                class="footer__info-location-logo"
-                src="./img/footer/location-logo.svg"
-                alt="location-logo"
+                src="./img/footer/location-logo.jpg"
+                alt="country"
+                class="country__logo"
               />
-              <p class="footer__info-location-city">РФ, г.Санкт-Петербург</p>
+              <div class="country__name">РФ, г.Санкт-Петербург</div>
             </div>
           </div>
-          <div class="footer__logo">
-            <div class="footer__logo-logo">
-              <a href="/"
-                ><img src="./img/footer/Yagoda-logo.svg" alt="Yagoda-logo"
+          <div class="footer__second-block">
+            <img
+              src="./img/footer/Yagoda-logo.svg"
+              alt="logo"
+              class="footer__logo"
+            />
+            <div class="socials">
+              <a href="https://vk.com/yagoda.studio" target="_blank">
+                <img src="./img/footer/vk.svg" alt="vk" class="socials__vk"
+              /></a>
+              <a href="https://ok.ru/group/57890757345300" target="_blank">
+                <img src="./img/footer/ok.svg" alt="ok" class="socials__ok"
               /></a>
             </div>
-            <div class="footer__logo-social-network">
-              <div class="social__network-ok">
-                <a href="/"><img src="./img/footer/ok.svg" alt="ok" /></a>
-              </div>
-              <div class="social__network-vk">
-                <a href="/"><img src="./img/footer/vk.svg" alt="vk" /></a>
-              </div>
-            </div>
-            <div class="footer__logo-privacy">
-              <a href="/">Политика конфиденциальности</a>
-            </div>
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
           </div>
-          <div class="footer__connection">
-            <div class="footer__connection-phone">
-              <div class="footer__connection-phone-phone">
-                <img src="./img/footer/phone.svg" alt="phone" />
-              </div>
-              <div class="footer__connection-phone-number">
-                <button class="popup__link" data-id="#phone">
-                  +7 (921) 966-24-08
+          <div class="footer__third-block">
+            <div class="footer__phone">
+              <img
+                src="./img/footer/phone.svg"
+                alt="phone"
+                class="footer__phone-icon"
+              />
+              <div class="phone__info">
+                <a class="phone__number" href="tel:+79219662408"
+                  >+7 (921) 966-24-08</a
+                >
+                <button class="phone__order popup__link" data-id="#phone">
+                  заказать звонок
                 </button>
-                <a class="phone__descript">бесплатный звонок</a>
               </div>
             </div>
-            <div class="footer__connection-franchises">
-              <div class="footer__connection-franchises-logo">
-                <a href="/"
-                  ><img
-                    src="./img/footer/franchises-logo.svg"
-                    alt="franchises-logo"
-                /></a>
-              </div>
-              <div class="footer__connection-franchises-descript">
-                <a href="/">Упаковка и продвижение франшиз: «Франчайзинг5»</a>
+            <div class="footer__franchise">
+              <a href="https://xn--5-7sbamtgf4aex7b0b.xn--p1ai/" target="_blank"
+                ><img
+                  src="./img/footer/franchises-logo.svg"
+                  alt="logo"
+                  class="franchise__logo"
+              /></a>
+              <div class="franchise__text">
+                <a
+                  href="https://xn--5-7sbamtgf4aex7b0b.xn--p1ai/"
+                  target="_blank"
+                  >Упаковка и продвижение франшиз: «Франчайзинг5»</a
+                >
               </div>
             </div>
           </div>
@@ -2111,11 +2175,14 @@
                 hidden
               />
               <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+              <div class="info__button form__btn">
+                <div class="button__container form__button-container">
+                  <div class="main__button form__button">
+                    <button class="btn btn-info" type="submit">
+                      Получить информацию
+                    </button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2134,7 +2201,7 @@
         <div class="popup__content second__content">
           <button class="modal__close close__popup"></button>
           <div class="popup__title">
-            Получите презентацию франшизы, финмодель и бизнес-план
+            Получите подробную информацию по франшизе
           </div>
           <div class="popup__descr">
             Заполните форму, чтобы заказать обратный звонок, и наш менеджер
@@ -2195,11 +2262,14 @@
                 hidden
               />
               <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+              <div class="info__button form__btn">
+                <div class="button__container form__button-container">
+                  <div class="main__button form__button">
+                    <button class="btn btn-info" type="submit">
+                      Заказать звонок
+                    </button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2276,11 +2346,14 @@
                 hidden
               />
               <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+              <div class="info__button form__btn">
+                <div class="button__container form__button-container">
+                  <div class="main__button form__button">
+                    <button class="btn btn-info" type="submit">
+                      Получить
+                    </button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2357,11 +2430,14 @@
                 hidden
               />
               <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+              <div class="info__button form__btn">
+                <div class="button__container form__button-container">
+                  <div class="main__button form__button">
+                    <button class="btn btn-info" type="submit">
+                      Получить информацию
+                    </button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2624,13 +2700,15 @@
               сети Интернет на сайте.
             </li>
           </ul>
-          <button
-            class="privacy__btn btn close__popup"
-            type="button"
-            data-id="#first"
-          >
-            Вернуться на сайт
-          </button>
+          <div class="info__button form__btn">
+            <div class="button__container form__button-container">
+              <div class="main__button form__button close__popup" data-id="#first">
+                <button class="btn btn-info" type="button">
+                  Вернуться на сайт
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2639,14 +2717,14 @@
     <script src="./js/tabs.js"></script>
     <script src="./js/calculator.js"></script>
     <script src="./js/form.js"></script>
-    <script src="./js/lazy.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/thanks.js"></script>
     <script src="js/formprocessor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script
       type="text/javascript"
       src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
       id="yamapsapi-js"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   </body>
 </html>

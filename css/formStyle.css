@@ -32,25 +32,6 @@
 .form__item._error {
   border-bottom: 2px solid red;
 }
-
-.form__button {
-  margin-top: 24px;
+.form__button-container{
   max-width: 380px;
-  padding: 25px 70px;
-  background: linear-gradient(
-    93.74deg,
-    #e03048 0%,
-    #ef465d 51.56%,
-    #e03048 100%
-  );
-  box-shadow: 0px 4px 50px rgba(239, 70, 93, 0.55);
-  border-radius: 4px 24px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 120%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-  color: #ffffff;
 }

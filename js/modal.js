@@ -1,10 +1,11 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
+  window.onload = function () {
+    modalExit();
+  };
   const popupLink = document.querySelectorAll(".popup__link");
   const body = document.querySelector("body");
   const lockPadding = document.querySelectorAll(".lock__padding");
-  const popup = document.querySelector(".popup");
-
   let unlock = true;
 
   const timeout = 800;
@@ -13,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popupLink.forEach((item) => {
       item.addEventListener("click", function (e) {
         const popupId = item.getAttribute("data-id");
-        console.log(popupId);
         const currentPopup = document.querySelector(popupId);
 
         popupOpen(currentPopup);
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         bodyLock();
       }
-      console.log(currentPopup);
       currentPopup.classList.add("open");
       currentPopup.addEventListener("click", function (e) {
         if (!e.target.closest(".popup__content")) {
@@ -96,4 +95,38 @@ document.addEventListener("DOMContentLoaded", function () {
       popupClose(popupActive);
     }
   });
+  function modalExit() {
+    const popupExit = document.querySelector("#third");
+    const body = document.querySelector("body");
+    let count = 0;
+
+    $(document).mouseleave(function (e) {
+      if (count > 0) {
+        return;
+      }
+      if (e.clientY < 10) {
+        setTimeout(function () {
+          popupExit.classList.add("open");
+          body.classList.add("lock");
+          if (popupExit.classList.contains("open")) {
+            body.addEventListener("keydown", function (e) {
+              if (e.keyCode === 27) {
+                popupExit.classList.remove("open");
+              }
+            });
+          }
+        }, 2000);
+        count++;
+      }
+    });
+    body.addEventListener("click", function (a) {
+      let target = a.target;
+      if (
+        target.classList.contains("popup__content") ||
+        target.classList.contains("close")
+      ) {
+        popupExit.classList.remove("open");
+      }
+    });
+  }
 });

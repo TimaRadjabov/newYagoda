@@ -1,142 +1,831 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/thanks.css">
-	<link rel="stylesheet" href="./css/formStyle.css">
-	<link rel="stylesheet" href="./css/footer.css">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap"
-		rel="stylesheet" />
-	<title>Document</title>
-</head>
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container">
-			  <div class="header__body">
-				 <div class="header__logo logo">
-					<div class="logo__block">
-					  <img src="./img/header/logo.svg" alt="logo" class="logo__img" />
-					  <img
-						 src="./img/header/logo-text.svg"
-						 alt="logo"
-						 class="logo__img-text"
-					  />
-					</div>
-				 </div>
-				 <div class="header__text">
-					<p class="header__descr">
-					  Франшиза студии ручного пластического массажа лица
-					</p>
-				 </div>
-				 <div class="header__call">
-					<div class="call__block">
-					  <div class="call__icon">
-						 <img src="./img/header/icon.svg" alt="phone-icon" />
-					  </div>
-					  <div class="call__text">
-						 <div class="call__number">+7 (921) 966-24-08</div>
-						 <p class="call__order">заказать звонок</p>
-					  </div>
-					</div>
-				 </div>
-			  </div>
-			</div>
-		</header>
-		<div class="thanks-section">
-			<div class="container">
-				<div class="thanks__body">
-					<div class="thanks__body-content">
-						<div class="thanks__title"><h1><p class="thanks__name-props">[Имя], </p>благодарим Вас за обращение в компанию Yagoda©</h1></div>
-						<div class="thanks__subtitle"><p>Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.</p></div>
-						<div class="thanks__work-schedule">
-							<div class="thanks__work-schedule-body">
-								<div class="thanks__work-schedule-days work-schedule">
-									<div class="thanks__work-schedule-days-icon icon"><img src="./img/thanks/icon-weekly.svg" alt="icon-weekly"></div>
-									<div class="thanks__work-schedule-days-description description"><p>График работы компании:</p> <span class="daily">Ежедневно</span></div>
-								</div>
-								<div class="thanks__work-schedule-hours work-schedule">
-									<div class="thanks__work-schedule-hours-icon icon"><img src="./img/thanks/icon-time.svg" alt="icon-time"></div>
-									<div class="thanks__work-schedule-hours-description description"><p>По нашему местному времени в г.Санкт-Петербург:</p> <span class="daily-weekly">пн - пт: <span class="daily-time">с 09:00 до 21:00</span> </span> <span class="daily-weekly daily-weekly-offdays">сб вс: <span class="daily-time"> с 09:00 до 20:00</span> </span></div>
-								</div>
-							</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/thanks.css" />
+	 <link rel="stylesheet" href="./css/modalStyle.css">
+	 <link rel="stylesheet" href="./css/formStyle.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <div class="header__logo logo">
+              <div class="logo__block">
+                <img src="./img/header/logo.png" alt="logo" class="logo__img" />
+                <img
+                  src="./img/header/header-text.png"
+                  alt="logo"
+                  class="logo__img-text"
+                />
+              </div>
+            </div>
+            <div class="header__text">
+              <p class="header__descr">
+                Франшиза студии ручного пластического массажа лица
+              </p>
+            </div>
+            <div class="header__call">
+              <div class="call__block">
+                <div class="call__icon">
+                  <img src="./img/header/icon.svg" alt="phone-icon" />
+                </div>
+                <div class="call__text">
+                  <a class="call__number" href="tel:+79219662408"
+                    >+7 (921) 966-24-08</a
+                  >
+                  <button class="call__order popup__link" data-id="#phone">
+                    заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page__content">
+        <div class="thanks__body">
+          <div class="container">
+				<div class="thanks__container">
+					<h1 class="thanks__title title">
+						<span id="formName">[Имя],</span> благодарим Вас за обращение в компанию Yagoda©
+					 </h1>
+					 <p class="thanks__descr">
+						Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
+					 </p>
+					 <div class="thanks__work">
+						<div class="thanks__work-item">
+						  <div class="thanks__work-circle">
+							 <img
+								src="./img/thanks/icon-weekly.svg"
+								alt="weekly"
+								class="work__logo"
+							 />
+						  </div>
+						  <div class="working__time">
+							 <div class="working__time-descr">График работы компании:</div>
+							 <div class="working__time-day">Ежедневно</div>
+						  </div>
 						</div>
-						<div class="thanks__work-schedule-text"><p>Если Вы оставили заявку в нерабочее время или в выходной/праздничный день — мы перезвоним Вам в ближайший рабочий день.</p></div>
-						<div class="thanks__introduction"><p>А пока ближе познакомьтесь с командой</p></div>
-						<div class="thanks__social-network">
-							<div class="thanks__social-network-body">
-								<div class="thanks__social-network-description"><p>О жизни проекта в соц.сетях:</p></div>
-								<div class="thanks__social-network-icons">
-									<div class="thanks__social-network-icons-vk"><a href=""><img src="./img/thanks/icon-vk.svg" alt="vk"></a></div>
-									<div class="thanks__social-network-icons-ok"><a href=""><img src="./img/thanks/icon-ok.svg" alt="ok"></a></div>
-								</div>
-							</div>
-						</div>
-						<div class="thanks__reviews">
-							<div class="thanks__reviews-description"><p>Отзывы клиентов:</p></div>
-							<div class="thanks__reviews-social">
-								<div class="thanks__reviews-social-yandex reviews-social">
-									<div class="reviews-social-yandex-icon reviews-social-icons"><a href="/"><img src="./img/thanks/yandex.svg" alt="yandex"></a></div>
-									<div class="reviews-social-yandex-description reviews-social-description"><a href="/">yandex</a></div>
-								</div>
-								<div class="thanks__reviews-social-google reviews-social">
-									<div class="reviews-social-google-icon reviews-social-icons"><a href="/"><img src="./img/thanks/google.svg" alt="google"></a></div>
-									<div class="reviews-social-google-description reviews-social-description"><a href="/">google</a></div>
-								</div>
-								<div class="thanks__reviews-social-2gis reviews-social">
-									<div class="reviews-social-2gis-icon reviews-social-icons"><a href="/"><img src="./img/thanks/2gis.svg" alt="2gis"></a></div>
-									<div class="reviews-social-2gis-description reviews-social-description"><a href="/">2gis</a></div>
-								</div>
-							</div>
-						</div>
-						<div class="thanks__description"><p>Сохраним Вашу молодость и красоту надолго с помощью максимально экологичных методов и с учётом современного ритма жизни в мегаполисе</p></div>
-						<button class="form__button" style="margin-bottom: 112px; padding: 25px 18px; width: 490px; height: 92px; margin-top: 29px" type="submit">Вернуться на основную страницу</button>
-					</div>
-					<div class="thanks__founder-card"><p>Елена Игоревна Плескова,<span>основатель компании</span>  </p></div>
-					<img class="thanks__img" src="./img/thanks/img.svg" alt="img">
-					<img class="thaks__back-img" src="./img/thanks/back-img.svg" alt="back-img">
-				</div>
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__body">
-					<div class="footer__info">
-						<div class="footer__info-data"><p>© Yagoda, 2019 - 2022 г.</p></div>
-						<div class="footer__info-property"><p>ИП Плескова Елена Игоревна,
-							ИНН 781306731722</p> </div>
-						<div class="footer__info-location">
-							<div class="footer__info-location-logo"><img src="./img/footer/location-logo.svg" alt=""></div>
-							<div class="footer__info-location-city"><p>РФ, г.Санкт-Петербург</p></div>
-						</div>
-					</div>
-					<div class="footer__logo">
-						<div class="footer__logo-logo"><a href="/"><img src="./img/footer/Yagoda-logo.svg" alt="Yagoda-logo"></a></div>
-						<div class="footer__logo-social-network">
-							<div class="social__network-ok"><a href="/"><img src="./img/footer/ok.svg" alt="ok"></a></div>
-							<div class="social__network-vk"><a href="/"><img src="./img/footer/vk.svg" alt="vk"></a></div>
-						</div>
-						<div class="footer__logo-privacy"><a href="/">Политика конфиденциальности</a></div>
-					</div>
-					<div class="footer__connection">
-						<div class="footer__connection-phone">
-							<div class="footer__connection-phone-phone"><img src="./img/footer/phone.svg" alt="phone"></div>
-							<div class="footer__connection-phone-number"><a href="/"><p>+7 (921) 966-24-08</p> <span class="phone__descript">позвоните сейчас чтобы не ждать звонка</span></a></div>
-						</div>
-						<div class="footer__connection-franchises">
-							<div class="footer__connection-franchises-logo"><a href="/"><img src="./img/footer/franchises-logo.svg" alt="franchises-logo"></a></div>
-							<div class="footer__connection-franchises-descript"><a href="/"><p>Упаковка и продвижение франшиз: «Франчайзинг5»</p></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-	 </footer>
+						<div class="thanks__work-item">
+						  <div class="thanks__work-circle">
+							 <img
+								src="./img/thanks/icon-time.svg"
+								alt="time"
+								class="work__logo"
+							 />
+						  </div>
 		
-	 </div>
-</body>
+						  <div class="working__time">
+							 <div class="working__time-descr">
+								По нашему местному времени в г.Санкт-Петербург:
+							 </div>
+							 <div class="working__time-day">
+								пн - пт:<span> с 09:00 до 21:00</span>
+							 </div>
+							 <div class="working__time-day">
+								сб вс: <span> с 09:00 до 20:00</span>
+							 </div>
+						  </div>
+						</div>
+						<div class="thanks__owner">
+							<p class="owner__name"><span>Елена Игоревна Плескова,</span> основатель компании </p>
+						</div>
+					 </div>
+					 <div class="thanks__text">
+						Если Вы оставили заявку в нерабочее время или в выходной/праздничный	
+						день — мы перезвоним Вам в ближайший рабочий день.
+					 </div>
+					 <div class="thanks__subtitle">
+						А пока ближе познакомьтесь с командой
+					 </div>
+					 <div class="thanks__work socials">
+						<div class="socials__text">О жизни проекта в соц.сетях:</div>
+						<div class="thanks__socials">
+						  <a href="https://vk.com/yagoda.studio" target="_blank"><img src="./img/thanks/icon-vk.svg" alt="vk" /></a>
+						  <a href="https://ok.ru/group/57890757345300" target="_blank"><img src="./img/thanks/icon-ok.svg" alt="ok" /></a>
+						</div>
+					 </div>
+					 <div class="thanks__subtitle clients">Отзывы клиентов:</div>
+					 <div class="thanks__webs">
+						<div class="webs__item">
+						  <a href="https://yandex.ru/maps/org/yagoda/235242013141/reviews/?ll=30.380277%2C59.946680&z=15" target="_blank"><img
+							 src="./img/thanks/yandex.svg"
+							 alt="yandex"
+							 class="webs__icon"
+						  /></a>
+						  <div class="webs__text"><a href="https://yandex.ru/maps/org/yagoda/235242013141/reviews/?ll=30.380277%2C59.946680&z=15" target="_blank">yandex</a></div>
+						</div>
+						<div class="webs__item">
+							<a href="https://yandex.ru/maps/org/yagoda/235242013141/reviews/?ll=30.380277%2C59.946680&z=15" target="_blank"><img
+							 src="./img/thanks/google.svg"
+							 alt="google"
+							 class="webs__icon"
+						  /></a>
+						  <div class="webs__text"><a href="https://yandex.ru/maps/org/yagoda/235242013141/reviews/?ll=30.380277%2C59.946680&z=15" target="_blank">google</a></div>
+						</div>
+						<div class="webs__item">
+							<a href="https://2gis.ru/spb/branches/70000001040964660/firm/70000001054313526/30.342518%2C59.957803/tab/reviews?m=30.401449%2C59.942234%2F14.47" target="_blank"><img src="./img/thanks/2gis.svg" alt="2gis" class="webs__icon" /></a>
+						  <div class="webs__text"><a href="https://2gis.ru/spb/branches/70000001040964660/firm/70000001054313526/30.342518%2C59.957803/tab/reviews?m=30.401449%2C59.942234%2F14.47" target="_blank">2gis</a></div>
+						</div>
+					 </div>
+					 <div class="thanks__subscribe">
+						Сохраним Вашу молодость и красоту надолго с помощью максимально
+						экологичных методов и с учётом современного ритма жизни в мегаполисе
+					 </div>
+					 <div class="btn__padding">
+            <div class="button__container thanks__button-container">
+              <div class="main__button" id="back">
+                 <button class="btn"> Вернуться на основную страницу</button>
+              </div>
+           </div>
+					
+				</div>
+			 </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <div class="footer__first-block">
+            <div class="footer__date">
+              <div class="date__name">© Yagoda,</div>
+              <div class="date__date">2019 - 2022 г.</div>
+            </div>
+            <div class="footer__owner">
+              <div class="owner__name">ИП Плескова Елена Игоревна,</div>
+              <div class="owner__ident">ИНН 781306731722</div>
+            </div>
+            <div class="footer__country">
+              <img
+                src="./img/footer/location-logo.jpg"
+                alt="country"
+                class="country__logo"
+              />
+              <div class="country__name">РФ, г.Санкт-Петербург</div>
+            </div>
+          </div>
+          <div class="footer__second-block">
+            <img
+              src="./img/footer/Yagoda-logo.svg"
+              alt="logo"
+              class="footer__logo"
+            />
+            <div class="socials">
+              <a href="https://vk.com/yagoda.studio" target="_blank">
+                <img src="./img/footer/vk.svg" alt="vk" class="socials__vk"
+              /></a>
+              <a href="https://ok.ru/group/57890757345300" target="_blank">
+                <img src="./img/footer/ok.svg" alt="ok" class="socials__ok"
+              /></a>
+            </div>
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
+          </div>
+          <div class="footer__third-block">
+            <div class="footer__phone">
+              <img
+                src="./img/footer/phone.svg"
+                alt="phone"
+                class="footer__phone-icon"
+              />
+              <div class="phone__info">
+                <a class="phone__number" href="tel:+79219662408"
+                  >+7 (921) 966-24-08</a
+                >
+                <button class="phone__order-thanks popup__link" data-id="#phone">
+                  позвоните сейчас чтобы не ждать звонка
+                </button>
+              </div>
+            </div>
+            <div class="footer__franchise">
+              <a href="https://xn--5-7sbamtgf4aex7b0b.xn--p1ai/" target="_blank"
+                ><img
+                  src="./img/footer/franchises-logo.svg"
+                  alt="logo"
+                  class="franchise__logo"
+              /></a>
+              <div class="franchise__text">
+                <a
+                  href="https://xn--5-7sbamtgf4aex7b0b.xn--p1ai/"
+                  target="_blank"
+                  >Упаковка и продвижение франшиз: «Франчайзинг5»</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/form.js"></script>
+    <script src="./js/thanks.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="js/formprocessor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script
+      type="text/javascript"
+      src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
+      id="yamapsapi-js"
+    ></script>
+
+	 <div class="popup" id="first">
+      <div class="body__popup">
+        <div class="popup__content">
+          <button class="modal__close close__popup"></button>
+          <div class="popup__title">
+            Получите презентацию франшизы, финмодель и бизнес-план
+          </div>
+          <div class="popup__descr"></div>
+          <div class="popup__form">
+            <form action="#" class="modal__form-first">
+              <div class="form__item">
+                <img
+                  src="./img/form/phone.svg"
+                  alt="phone-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form__input _first _phone"
+                  placeholder="+7(___) ___ ____"
+                  data-slots="_"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/email.svg"
+                  alt="email-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input _first _email"
+                  placeholder="bestpartner@yagoda.me"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/person.svg"
+                  alt="person-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input _first _name"
+                  placeholder="Елена Плескова"
+                />
+              </div>
+              <input
+                type="text"
+                name="section-name-text"
+                value="Получите презентацию франшизы, финмодель и бизнес-план"
+                hidden
+              />
+              <input
+                type="text"
+                name="section-btn-text"
+                value="Получить информацию"
+                hidden
+              />
+              <input type="text" name="section-name" value="Закрытая" hidden />
+              <div class="form__btn">
+                <button class="form__button btn" type="submit">
+                  Получить информацию
+                </button>
+                <div class="button__effect"></div>
+              </div>
+            </form>
+          </div>
+          <div class="privacy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="second">
+      <div class="body__popup">
+        <div class="popup__content second__content">
+          <button class="modal__close close__popup"></button>
+          <div class="popup__title">
+            Получите презентацию франшизы, финмодель и бизнес-план
+          </div>
+          <div class="popup__descr">
+            Заполните форму, чтобы заказать обратный звонок, и наш менеджер
+            свяжется с вами в ближайшее время
+          </div>
+          <div class="popup__form">
+            <form action="#" class="modal__form-second">
+              <div class="form__item">
+                <img
+                  src="./img/form/phone.svg"
+                  alt="phone-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form__input _second _phone"
+                  placeholder="+7(___) ___ ____"
+                  data-slots="_"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/email.svg"
+                  alt="email-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input _second _email"
+                  placeholder="bestpartner@yagoda.me"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/person.svg"
+                  alt="person-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input _second _name"
+                  placeholder="Елена Плескова"
+                />
+              </div>
+              <input
+                type="text"
+                name="section-name-text"
+                value="Получите презентацию франшизы, финмодель и бизнес-план"
+                hidden
+              />
+              <input
+                type="text"
+                name="section-btn-text"
+                value="Получить информацию"
+                hidden
+              />
+              <input type="text" name="section-name" value="Закрытая" hidden />
+              <div class="form__btn">
+                <button class="form__button btn" type="submit">
+                  Получить информацию
+                </button>
+                <div class="button__effect"></div>
+              </div>
+            </form>
+          </div>
+          <div class="privacy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="third">
+      <div class="body__popup">
+        <div class="popup__content third__content">
+          <button class="modal__close close__popup"></button>
+          <div class="popup__title">Уже уходите?</div>
+          <div class="popup__descr">
+            Получите презентацию франшизы на почту.
+          </div>
+          <div class="popup__form">
+            <form action="#" class="modal__form-third">
+              <div class="form__item">
+                <img
+                  src="./img/form/phone.svg"
+                  alt="phone-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form__input _third _phone"
+                  placeholder="+7(___) ___ ____"
+                  data-slots="_"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/email.svg"
+                  alt="email-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input _third _email"
+                  placeholder="bestpartner@yagoda.me"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/person.svg"
+                  alt="person-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input _third _name"
+                  placeholder="Елена Плескова"
+                />
+              </div>
+              <input
+                type="text"
+                name="section-name-text"
+                value="Получите презентацию франшизы, финмодель и бизнес-план"
+                hidden
+              />
+              <input
+                type="text"
+                name="section-btn-text"
+                value="Получить информацию"
+                hidden
+              />
+              <input type="text" name="section-name" value="Закрытая" hidden />
+              <div class="form__btn">
+                <button class="form__button btn" type="submit">
+                  Получить информацию
+                </button>
+                <div class="button__effect"></div>
+              </div>
+            </form>
+          </div>
+          <div class="privacy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="phone">
+      <div class="body__popup">
+        <div class="popup__content phone__content">
+          <button class="modal__close close__popup"></button>
+          <div class="popup__title phone__title">
+            Получите подробную информацию по франшизе. закажите обратный звонок,
+            и наш менеджер свяжется с вами в ближайшее время
+          </div>
+          <div class="popup__form phone__form">
+            <form action="#" class="modal__form-phone">
+              <div class="form__item">
+                <img
+                  src="./img/form/phone.svg"
+                  alt="phone-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form__input _phone _phone"
+                  placeholder="+7(___) ___ ____"
+                  data-slots="_"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/email.svg"
+                  alt="email-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  class="form__input _phone _email"
+                  placeholder="bestpartner@yagoda.me"
+                />
+              </div>
+              <div class="form__item">
+                <img
+                  src="./img/form/person.svg"
+                  alt="person-icon"
+                  class="form__input-img"
+                />
+                <input
+                  type="text"
+                  name="name"
+                  class="form__input _phone _name"
+                  placeholder="Елена Плескова"
+                />
+              </div>
+              <input
+                type="text"
+                name="section-name-text"
+                value="Получите презентацию франшизы, финмодель и бизнес-план"
+                hidden
+              />
+              <input
+                type="text"
+                name="section-btn-text"
+                value="Получить информацию"
+                hidden
+              />
+              <input type="text" name="section-name" value="Закрытая" hidden />
+              <div class="form__btn">
+                <button class="form__button btn phono__form-btn" type="submit">
+                  Получить информацию
+                </button>
+                <div class="button__effect"></div>
+              </div>
+            </form>
+          </div>
+          <div class="privacy phone__privacy">
+            Я подтверждаю, что ознакомлен и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button data-id="#privacy" class="popup__link">
+              Политикой конфиденциальности
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="privacy">
+      <div class="body__popup">
+        <div class="popup__content privacy__content">
+          <button class="modal__close close__popup"></button>
+          <div class="popup__title privacy__title">
+            Политика конфиденциальности
+          </div>
+          <p>1. Общие положения</p>
+          <p>
+            Настоящая политика обработки персональных данных составлена в
+            соответствии с требованиями Федерального закона от 27.07.2006.
+            №152-ФЗ «О персональных данных» и определяет порядок обработки
+            персональных данных и меры по обеспечению безопасности персональных
+            данных.
+          </p>
+
+          <ul>
+            <li>
+              1. Оператор ставит своей важнейшей целью и условием осуществления
+              своей деятельности соблюдение прав и свобод человека и гражданина
+              при обработке его персональных данных, в том числе защиты прав на
+              неприкосновенность частной жизни, личную и семейную тайну.
+            </li>
+            <li>
+              2. Настоящая политика Оператора в отношении обработки персональных
+              данных (далее – Политика) применяется ко всей информации, которую
+              Оператор может получить о посетителях веб-сайта компании «SITE».
+            </li>
+          </ul>
+
+          <p>2. Основные понятия, используемые в Политике</p>
+
+          <ul>
+            <li>
+              1. Автоматизированная обработка персональных данных – обработка
+              персональных данных с помощью средств вычислительной техники;
+            </li>
+            <li>
+              2. Блокирование персональных данных – временное прекращение
+              обработки персональных данных (за исключением случаев, если
+              обработка необходима для уточнения персональных данных);
+            </li>
+            <li>
+              3. Веб-сайт – совокупность графических и информационных
+              материалов, а также программ для ЭВМ и баз данных, обеспечивающих
+              их доступность в сети интернет по сетевому адресу
+            </li>
+            <li>
+              4. Информационная система персональных данных — совокупность
+              содержащихся в базах данных персональных данных, и обеспечивающих
+              их обработку информационных технологий и технических средств;
+            </li>
+            <li>
+              5. Обезличивание персональных данных — действия, в результате
+              которых невозможно определить без использования дополнительной
+              информации принадлежность персональных данных конкретному
+              Пользователю или иному субъекту персональных данных;
+            </li>
+            <li>
+              6. Обработка персональных данных – любое действие (операция) или
+              совокупность действий (операций), совершаемых с использованием
+              средств автоматизации или без использования таких средств с
+              персональными данными, включая сбор, запись, систематизацию,
+              накопление, хранение, уточнение (обновление, изменение),
+              извлечение, использование, передачу (распространение,
+              предоставление, доступ), обезличивание, блокирование, удаление,
+              уничтожение персональных данных;
+            </li>
+            <li>
+              7. Оператор – государственный орган, муниципальный орган,
+              юридическое или физическое лицо, самостоятельно или совместно с
+              другими лицами организующие и (или) осуществляющие обработку
+              персональных данных, а также определяющие цели обработки
+              персональных данных, состав персональных данных, подлежащих
+              обработке, действия (операции), совершаемые с персональными
+              данными;
+            </li>
+            <li>
+              8. Персональные данные – любая информация, относящаяся прямо или
+              косвенно к определенному или определяемому Пользователю веб-сайта;
+            </li>
+            <li>9. Пользователь – любой посетитель веб-сайта;</li>
+            <li>
+              10. Предоставление персональных данных – действия, направленные на
+              раскрытие персональных данных определенному лицу или определенному
+              кругу лиц;
+            </li>
+            <li>
+              11. Распространение персональных данных – любые действия,
+              направленные на раскрытие персональных данных неопределенному
+              кругу лиц (передача персональных данных) или на ознакомление с
+              персональными данными неограниченного круга лиц, в том числе
+              обнародование персональных данных в средствах массовой информации,
+              размещение в информационно-телекоммуникационных сетях или
+              предоставление доступа к персональным данным каким-либо иным
+              способом;
+            </li>
+            <li>
+              12. Трансграничная передача персональных данных – передача
+              персональных данных на территорию иностранного государства органу
+              власти иностранного государства, иностранному физическому или
+              иностранному юридическому лицу;
+            </li>
+            <li>
+              13. Уничтожение персональных данных – любые действия, в результате
+              которых персональные данные уничтожаются безвозвратно с
+              невозможностью дальнейшего восстановления содержания персональных
+              данных в информационной системе персональных данных и (или)
+              результате которых уничтожаются материальные носители персональных
+              данных.
+            </li>
+          </ul>
+
+          <p>
+            3. Оператор может обрабатывать следующие персональные данные
+            Пользователя
+          </p>
+
+          <ul>
+            <li>1. Фамилия, имя, отчество;</li>
+            <li>2. Номер телефона;</li>
+            <li>3. Адрес электронной почты;</li>
+            <li>
+              4. Также на сайте происходит сбор и обработка обезличенных данных
+              о посетителях (в т.ч. файлов «cookie») с помощью сервисов
+              интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).
+            </li>
+            <li>
+              5. Вышеперечисленные данные далее по тексту Политики объединены
+              общим понятием Персональные данные.
+            </li>
+          </ul>
+
+          <p>4. Цели обработки персональных данных</p>
+
+          <ul>
+            <li>
+              1. Цель обработки персональных данных Пользователя — заключение,
+              исполнение и прекращение гражданско-правовых договоров;
+              предоставление доступа Пользователю к сервисам, информации и/или
+              материалам, содержащимся на веб-сайте; уточнение деталей
+              обращения.
+            </li>
+            <li>
+              2. Также Оператор имеет право направлять Пользователю уведомления
+              о новых продуктах и услугах, специальных предложениях и различных
+              событиях. Пользователь всегда может отказаться от получения
+              информационных сообщений, направив Оператору письмо на адрес
+              электронной почты с доменом mail@site.ru с пометкой «Отказ от
+              уведомлений о новых продуктах и услугах и специальных
+              предложениях».
+            </li>
+            <li>
+              3. Обезличенные данные Пользователей, собираемые с помощью
+              сервисов интернет-статистики, служат для сбора информации о
+              действиях Пользователей на сайте, улучшения качества сайта и его
+              содержания.
+            </li>
+          </ul>
+
+          <p>5. Правовые основания обработки персональных данных</p>
+
+          <ul>
+            <li>
+              1. Оператор обрабатывает персональные данные Пользователя только в
+              случае их заполнения и/или отправки Пользователем самостоятельно
+              через специальные формы, расположенные на сайте. Заполняя
+              соответствующие формы и/или отправляя свои персональные данные
+              Оператору, Пользователь выражает свое согласие с данной Политикой.
+            </li>
+            <li>
+              2. Оператор обрабатывает обезличенные данные о Пользователе в
+              случае, если это разрешено в настройках браузера Пользователя
+              (включено сохранение файлов «cookie» и использование технологии
+              JavaScript).
+            </li>
+          </ul>
+
+          <p>
+            6. Порядок сбора, хранения, передачи и других видов обработки
+            персональных данных
+          </p>
+
+          <p>
+            Безопасность персональных данных, которые обрабатываются Оператором,
+            обеспечивается путем реализации правовых, организационных и
+            технических мер, необходимых для выполнения в полном объеме
+            требований действующего законодательства в области защиты
+            персональных данных.
+          </p>
+
+          <ul>
+            <li>
+              1. Оператор обеспечивает сохранность персональных данных и
+              принимает все возможные меры, исключающие доступ к персональным
+              данным неуполномоченных лиц.
+            </li>
+            <li>
+              2. Персональные данные Пользователя никогда, ни при каких условиях
+              не будут переданы третьим лицам, за исключением случаев, связанных
+              с исполнением действующего законодательства.
+            </li>
+            <li>
+              3. Срок обработки персональных данных является неограниченным.
+              Пользователь может в любой момент отозвать свое согласие на
+              обработку персональных данных, направив Оператору уведомление
+              посредством электронной почты на электронный адрес Оператора с
+              пометкой «Отзыв согласия на обработку персональных данных».
+            </li>
+          </ul>
+
+          <p>7. Трансграничная передача персональных данных</p>
+
+          <ul>
+            <li>
+              1. Оператор до начала осуществления трансграничной передачи
+              персональных данных обязан убедиться в том, что иностранным
+              государством, на территорию которого предполагается осуществлять
+              передачу персональных данных, обеспечивается надежная защита прав
+              субъектов персональных данных.
+            </li>
+            <li>
+              2. Трансграничная передача персональных данных на территории
+              иностранных государств, не отвечающих вышеуказанным требованиям,
+              может осуществляться только в случае наличия согласия в письменной
+              форме субъекта персональных данных на трансграничную передачу его
+              персональных данных и/или исполнения договора, стороной которого
+              является субъект персональных данных.
+            </li>
+          </ul>
+
+          <p>8. Заключительные положения</p>
+
+          <ul>
+            <li>
+              1. Пользователь может получить любые разъяснения по интересующим
+              вопросам, касающимся обработки его персональных данных,
+              обратившись к Оператору по телефону, указанному на сайте.
+            </li>
+            <li>
+              2. В данном документе будут отражены любые изменения политики
+              обработки персональных данных Оператором. Политика действует
+              бессрочно до замены ее новой версией.
+            </li>
+            <li>
+              3. Актуальная версия Политики в свободном доступе расположена в
+              сети Интернет на сайте.
+            </li>
+          </ul>
+          <button
+            class="privacy__btn btn close__popup"
+            type="button"
+            data-id="#first"
+          >
+            Вернуться на сайт
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
