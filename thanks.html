@@ -13,10 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Poppins:wght@300;700&family=Roboto:wght@300;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title></title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper thanks__wrapper">
       <header class="header">
         <div class="container">
           <div class="header__body">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </header>
-      <div class="page__content">
+      <div class="page__content thanks__content">
         <div class="thanks__body">
           <div class="container">
 				<div class="thanks__container">
@@ -161,7 +161,7 @@
           <div class="footer__first-block">
             <div class="footer__date">
               <div class="date__name">© Yagoda,</div>
-              <div class="date__date">2019 - 2022 г.</div>
+              <div class="date__date">2019 - <span class="date-now">2022</span> г.</div>
             </div>
             <div class="footer__owner">
               <div class="owner__name">ИП Плескова Елена Игоревна,</div>
@@ -229,264 +229,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/form.js"></script>
-    <script src="./js/thanks.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="js/formprocessor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script
-      type="text/javascript"
-      src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
-      id="yamapsapi-js"
-    ></script>
-
-	 <div class="popup" id="first">
-      <div class="body__popup">
-        <div class="popup__content">
-          <button class="modal__close close__popup"></button>
-          <div class="popup__title">
-            Получите презентацию франшизы, финмодель и бизнес-план
-          </div>
-          <div class="popup__descr"></div>
-          <div class="popup__form">
-            <form action="#" class="modal__form-first">
-              <div class="form__item">
-                <img
-                  src="./img/form/phone.svg"
-                  alt="phone-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  class="form__input _first _phone"
-                  placeholder="+7(___) ___ ____"
-                  data-slots="_"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/email.svg"
-                  alt="email-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  class="form__input _first _email"
-                  placeholder="bestpartner@yagoda.me"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/person.svg"
-                  alt="person-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="text"
-                  name="name"
-                  class="form__input _first _name"
-                  placeholder="Елена Плескова"
-                />
-              </div>
-              <input
-                type="text"
-                name="section-name-text"
-                value="Получите презентацию франшизы, финмодель и бизнес-план"
-                hidden
-              />
-              <input
-                type="text"
-                name="section-btn-text"
-                value="Получить информацию"
-                hidden
-              />
-              <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
-              </div>
-            </form>
-          </div>
-          <div class="privacy">
-            Я подтверждаю, что ознакомлен и даю согласие на обработку
-            персональных данных на условиях и для целей, определяемых
-            <button data-id="#privacy" class="popup__link">
-              Политикой конфиденциальности
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="popup" id="second">
-      <div class="body__popup">
-        <div class="popup__content second__content">
-          <button class="modal__close close__popup"></button>
-          <div class="popup__title">
-            Получите презентацию франшизы, финмодель и бизнес-план
-          </div>
-          <div class="popup__descr">
-            Заполните форму, чтобы заказать обратный звонок, и наш менеджер
-            свяжется с вами в ближайшее время
-          </div>
-          <div class="popup__form">
-            <form action="#" class="modal__form-second">
-              <div class="form__item">
-                <img
-                  src="./img/form/phone.svg"
-                  alt="phone-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  class="form__input _second _phone"
-                  placeholder="+7(___) ___ ____"
-                  data-slots="_"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/email.svg"
-                  alt="email-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  class="form__input _second _email"
-                  placeholder="bestpartner@yagoda.me"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/person.svg"
-                  alt="person-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="text"
-                  name="name"
-                  class="form__input _second _name"
-                  placeholder="Елена Плескова"
-                />
-              </div>
-              <input
-                type="text"
-                name="section-name-text"
-                value="Получите презентацию франшизы, финмодель и бизнес-план"
-                hidden
-              />
-              <input
-                type="text"
-                name="section-btn-text"
-                value="Получить информацию"
-                hidden
-              />
-              <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
-              </div>
-            </form>
-          </div>
-          <div class="privacy">
-            Я подтверждаю, что ознакомлен и даю согласие на обработку
-            персональных данных на условиях и для целей, определяемых
-            <button data-id="#privacy" class="popup__link">
-              Политикой конфиденциальности
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="popup" id="third">
-      <div class="body__popup">
-        <div class="popup__content third__content">
-          <button class="modal__close close__popup"></button>
-          <div class="popup__title">Уже уходите?</div>
-          <div class="popup__descr">
-            Получите презентацию франшизы на почту.
-          </div>
-          <div class="popup__form">
-            <form action="#" class="modal__form-third">
-              <div class="form__item">
-                <img
-                  src="./img/form/phone.svg"
-                  alt="phone-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  class="form__input _third _phone"
-                  placeholder="+7(___) ___ ____"
-                  data-slots="_"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/email.svg"
-                  alt="email-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  class="form__input _third _email"
-                  placeholder="bestpartner@yagoda.me"
-                />
-              </div>
-              <div class="form__item">
-                <img
-                  src="./img/form/person.svg"
-                  alt="person-icon"
-                  class="form__input-img"
-                />
-                <input
-                  type="text"
-                  name="name"
-                  class="form__input _third _name"
-                  placeholder="Елена Плескова"
-                />
-              </div>
-              <input
-                type="text"
-                name="section-name-text"
-                value="Получите презентацию франшизы, финмодель и бизнес-план"
-                hidden
-              />
-              <input
-                type="text"
-                name="section-btn-text"
-                value="Получить информацию"
-                hidden
-              />
-              <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
-              </div>
-            </form>
-          </div>
-          <div class="privacy">
-            Я подтверждаю, что ознакомлен и даю согласие на обработку
-            персональных данных на условиях и для целей, определяемых
-            <button data-id="#privacy" class="popup__link">
-              Политикой конфиденциальности
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+   
+	 
     <div class="popup" id="phone">
       <div class="body__popup">
         <div class="popup__content phone__content">
@@ -506,7 +250,7 @@
                 <input
                   type="tel"
                   name="phone"
-                  class="form__input _phone _phone"
+                  class="form__input _phoneI _phone"
                   placeholder="+7(___) ___ ____"
                   data-slots="_"
                 />
@@ -520,7 +264,7 @@
                 <input
                   type="email"
                   name="email"
-                  class="form__input _phone _email"
+                  class="form__input _phoneI _email"
                   placeholder="bestpartner@yagoda.me"
                 />
               </div>
@@ -533,7 +277,7 @@
                 <input
                   type="text"
                   name="name"
-                  class="form__input _phone _name"
+                  class="form__input _phoneI _name"
                   placeholder="Елена Плескова"
                 />
               </div>
@@ -550,11 +294,14 @@
                 hidden
               />
               <input type="text" name="section-name" value="Закрытая" hidden />
-              <div class="form__btn">
-                <button class="form__button btn phono__form-btn" type="submit">
-                  Получить информацию
-                </button>
-                <div class="button__effect"></div>
+              <div class="info__button form__btn">
+                <div class="button__container form__button-container">
+                  <div class="main__button form__button">
+                    <button class="btn btn-info" type="submit">
+                      Получить информацию
+                    </button>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -817,15 +564,29 @@
               сети Интернет на сайте.
             </li>
           </ul>
-          <button
-            class="privacy__btn btn close__popup"
-            type="button"
-            data-id="#first"
-          >
-            Вернуться на сайт
-          </button>
+          <div class="info__button form__btn">
+            <div class="button__container form__button-container">
+              <div class="main__button form__button close__popup" data-id="#first">
+                <button class="btn btn-info" type="button">
+                  Вернуться на сайт
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="./js/thanks.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="./js/date.js" ></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="js/formprocessor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script
+      type="text/javascript"
+      src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
+      id="yamapsapi-js"
+    ></script>
   </body>
 </html>

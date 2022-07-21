@@ -7,5 +7,6 @@ document.addEventListener("DOMContentLoaded", function(){
       window.location = "file:///C:/Users/Asus/Desktop/Yagoda/index.html";
    })
    let nameClient = localStorage.getItem('nameClient');
-   clientId.innerHTML = nameClient;
+   clientId.innerHTML = nameClient + ',';
+   document.title = nameClient + " спасибо! Ваша заявка принята";
 })

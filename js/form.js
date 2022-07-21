@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 
-  /* form.addEventListener("submit", formSend); */
+  form.addEventListener("submit", formSend);
   modalFormFirst.addEventListener("submit", firstModalFormSend);
   modalFormSecond.addEventListener("submit", secondModalFormSend);
   modalFormThird.addEventListener("submit", thirdModalFormSend);
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         body: formData,
       }); */
-    let data = new FormData(form); 
-      console.log(data.get("name"));
+      let data = new FormData(form); 
+      localStorage.setItem("nameClient", data.get("name"));
+      form.reset();
       window.location.href =
-          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
-        form.reset();
+          "thanks.html";
       /* if (response.ok) {
         let result = await response.json();
         console.log(result);
@@ -75,38 +75,57 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     if (error === 0) {
+      /*  let response = await fetch("formProcessor.php", {
+        method: "POST",
+        body: formData,
+      }); */
       let data = new FormData(modalFormFirst); 
       localStorage.setItem("nameClient", data.get("name"));
       modalFormFirst.reset();
       window.location.href =
-          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
+          "thanks.html";
     }
   }
   function secondModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormSecond, "._second");
     if (error === 0) {
-      let data = new FormData(form); 
+      /*  let response = await fetch("formProcessor.php", {
+        method: "POST",
+        body: formData,
+      }); */
+      
+      let data = new FormData(modalFormSecond); 
+      localStorage.setItem("nameClient", data.get("name"));
       modalFormSecond.reset();
       window.location.href =
-          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
+          "thanks.html";
     }
   }
   function thirdModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormThird, "._third");
     if (error === 0) {
-      let data = new FormData(form); 
+      /*  let response = await fetch("formProcessor.php", {
+        method: "POST",
+        body: formData,
+      }); */
+      let data = new FormData(modalFormThird); 
+      localStorage.setItem("nameClient", data.get("name"));
       modalFormThird.reset();
       window.location.href =
-          "file:///C:/Users/Asus/Desktop/Yagoda/thanks.html";
+          "thanks.html";
     }
   }
   function phoneModalFormSend(e) {
     e.preventDefault();
-    let error = formValidate(modalFormPhone, "._phone");
+    let error = formValidate(modalFormPhone, "._phoneI");
     if (error === 0) {
+      let data = new FormData(modalFormPhone); 
+      localStorage.setItem("nameClient", data.get("name"));
       modalFormPhone.reset();
+      window.location.href =
+          "thanks.html";
     }
   }
 
@@ -117,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
       formRemoveError(input);
-
       if (input.classList.contains("_email")) {
         if (emailTest(input)) {
           formAddError(input);
@@ -141,4 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function emailTest(input) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
+
+
 });
