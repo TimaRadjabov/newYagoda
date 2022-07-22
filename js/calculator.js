@@ -12,8 +12,7 @@ const screenWidth = window.screen.width;
 
 function customSlider() {
   const num =
-    (slider01.value * 3900 + slider02.value * 3700 + slider03.value * 3800) *
-    slider04.value;
+    (slider01.value * 3900 + slider02.value * 3700 + slider03.value * 3800) * slider04.value * 0.197;
 
   const result = new Intl.NumberFormat("ru-RU").format(num);
 

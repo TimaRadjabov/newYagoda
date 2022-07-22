@@ -238,10 +238,13 @@ body {
     display: flex;
     position: relative;
   }
-
-  .slide-list {
-    display: none;
+  .slider-track{
     margin: 0 auto;
+  }
+
+  .slide-list{
+    display: none;
+    transition: opacity 0.3s ease-in-out;
   }
   .slide-active {
     display: block;
@@ -807,12 +810,13 @@ body {
     position: static;
     width: 120px;
     height: 100px;
+    margin-top: 25px;
   }
   .device {
     display: block;
     position: static;
     width: 120px;
-    height: 100px; 
+    height: 125px; 
   }
 }
 
@@ -2916,23 +2920,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+@media (max-width: 1196px) {
+  .portrait{
+     background: url("../img/portrait/back.png") 75% 0 no-repeat;
+  }
+}
 
-/* .portrait__block-top{
-  position:relative;
-  z-index: 5;
-}
-.portrait__img-01{
-  position: absolute;
-  top: -60px;
-  left: -35%;
-  z-index: 1;
-}
-.portrait__img-02{
-  position: absolute;
-  top: -60px;
-  left: -35%;
-  z-index: 1;
-} */
+
 .portrait__title {
   color: #181818;
   padding-top: 83px;
@@ -3012,17 +3006,8 @@ body {
   margin-bottom: 85px;
 }
 @media (max-width: 1198px) {
-  .portrait {
-    background: url("../img/portrait/girl__effect.png") -100% 0 no-repeat,
-      url("../img/portrait/background.png") 100% 0 no-repeat;
-  }
   .portrait__content {
     margin: 0 auto;
-  }
-}
-@media (max-width: 996px) {
-  .portrait {
-    background: url("../img/portrait/girl__effect.png") 0 0 no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -3249,11 +3234,6 @@ body {
   padding-bottom: 80px;
 }
 
-@media (max-width: 1212px) {
-  .info {
-    background: url("../img/info/info-photo02.svg") 0 0 no-repeat, #201b16;
-  }
-}
 @media (max-width: 1176px) {
   .form__container::after {
     width: 986px;

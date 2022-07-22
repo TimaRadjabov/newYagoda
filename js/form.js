@@ -47,20 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
   async function formSend(e) {
     e.preventDefault();
     let error = formValidate(form, "._req");
+
+    let formData = new FormData(form);
     if (error === 0) {
-      let response = await fetch("formProcessor.php", {
+      let response = await fetch("php/formProcessor.php", {
         method: "POST",
         body: formData,
       });
-      let data = new FormData(form);
-      localStorage.setItem("nameClient", data.get("name"));
-      form.reset();
-      window.location.href = "thanks.html";
       if (response.ok) {
-        let result = await response.json();
-        console.log(result);
-      } else {
-        console.log("error");
+        localStorage.setItem("nameClient", formData.get("name"));
+        form.reset();
+        window.location.href = "thanks.html";
       }
     }
   }
@@ -68,77 +65,67 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     let error = formValidate(modalFormFirst, "._first");
 
+    let formData = new FormData(modalFormFirst);
     if (error === 0) {
-      let response = await fetch("formProcessor.php", {
+      let response = await fetch("php/formProcessor.php", {
         method: "POST",
         body: formData,
       });
-      let data = new FormData(modalFormFirst);
-      localStorage.setItem("nameClient", data.get("name"));
-      modalFormFirst.reset();
-      window.location.href = "thanks.html";
       if (response.ok) {
-        let result = await response.json();
-        console.log(result);
-      } else {
-        console.log("error");
+        localStorage.setItem("nameClient", formData.get("name"));
+        modalFormFirst.reset();
+        window.location.href = "thanks.html";
       }
     }
   }
   async function secondModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormSecond, "._second");
+
+    let formData = new FormData(modalFormSecond);
     if (error === 0) {
-      let response = await fetch("formProcessor.php", {
+      let response = await fetch("php/formProcessor.php", {
         method: "POST",
         body: formData,
       });
-
-      let data = new FormData(modalFormSecond);
-      localStorage.setItem("nameClient", data.get("name"));
-      modalFormSecond.reset();
-      window.location.href = "thanks.html";
       if (response.ok) {
-        let result = await response.json();
-        console.log(result);
-      } else {
-        console.log("error");
+        localStorage.setItem("nameClient", formData.get("name"));
+        modalFormSecond.reset();
+        window.location.href = "thanks.html";
       }
     }
   }
   async function thirdModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormThird, "._third");
+
+    let formData = new FormData(modalFormThird);
     if (error === 0) {
-      let response = await fetch("formProcessor.php", {
+      let response = await fetch("php/formProcessor.php", {
         method: "POST",
         body: formData,
       });
-      let data = new FormData(modalFormThird);
-      localStorage.setItem("nameClient", data.get("name"));
-      modalFormThird.reset();
-      window.location.href = "thanks.html";
       if (response.ok) {
-        let result = await response.json();
-        console.log(result);
-      } else {
-        console.log("error");
+        localStorage.setItem("nameClient", formData.get("name"));
+        modalFormThird.reset();
+        window.location.href = "thanks.html";
       }
     }
   }
   async function phoneModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormPhone, "._phoneI");
+
+    let formData = new FormData(modalFormThird);
     if (error === 0) {
-      let data = new FormData(modalFormPhone);
-      localStorage.setItem("nameClient", data.get("name"));
-      modalFormPhone.reset();
-      window.location.href = "thanks.html";
+      let response = await fetch("php/formProcessor.php", {
+        method: "POST",
+        body: formData,
+      });
       if (response.ok) {
-        let result = await response.json();
-        console.log(result);
-      } else {
-        console.log("error");
+        localStorage.setItem("nameClient", formData.get("name"));
+        modalFormThird.reset();
+        window.location.href = "thanks.html";
       }
     }
   }
