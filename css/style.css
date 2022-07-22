@@ -224,41 +224,40 @@ body {
 .main__list > *:not(:last-child) {
   margin-right: 40px;
 }
-.main__slider{
+.main__slider {
   display: none;
 }
 @media (max-width: 600px) {
-  .main__list{
+  .main__list {
     display: none;
   }
-  .main__slider{
+  .main__slider {
     display: block;
   }
-  .slider-flex{
+  .slider-flex {
     display: flex;
     position: relative;
   }
 
-  .slide-list{
+  .slide-list {
     display: none;
     margin: 0 auto;
   }
-  .slide-active{
+  .slide-active {
     display: block;
-    
   }
-.presentation__block{
-  padding-top: 15px;
-}
-  .slide-dots{
+  .presentation__block {
+    padding-top: 15px;
+  }
+  .slide-dots {
     display: flex;
     justify-content: center;
     margin-top: 15px;
   }
-  .slide-dot.slide-active{
+  .slide-dot.slide-active {
     background-color: #000;
   }
-  .slide-dot{
+  .slide-dot {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -266,7 +265,7 @@ body {
     margin-right: 10px;
     cursor: pointer;
   }
-  .slide-dot:last-child{
+  .slide-dot:last-child {
     margin-right: 0;
   }
 }
@@ -399,8 +398,8 @@ body {
 
 /* ========================================================== category ====================================================== */
 .category__body {
-  background: url("../img/category/left__bg.jpg") 0 100% no-repeat,
-    url("../img/category/right__bg.jpg") 100% 100% no-repeat;
+  background: url("../img/category/main-back.png") center center no-repeat;
+  background-size: cover;
 }
 .category__title {
   max-width: 657px;
@@ -727,6 +726,7 @@ body {
   .clients__list {
     justify-content: space-around;
     align-items: flex-start;
+    padding-bottom: 50px;
   }
   .clients__item {
     width: 320px;
@@ -744,11 +744,10 @@ body {
 
 /* ========================================================== flyer ====================================================== */
 .flyer {
-  background: url("../img/flyer/device.png") -10% 20% no-repeat,
-    url("../img/flyer/tube.png") 110% 0% no-repeat,
-    url("../img/flyer/background.jpg");
+  background: url("../img/flyer/background.jpg");
+
 }
-.flyer__body {
+.flyer__body{
   position: relative;
 }
 .flyer__title {
@@ -764,15 +763,29 @@ body {
 .flyer__title span {
   font-weight: 700;
 }
-
-@media (max-width: 1170px) {
-  .flyer__title {
-    padding: 50px 0px;
-  }
+.tube {
+  position: absolute;
+  right: -20%;
+  top: -13%;
 }
+.device {
+  position: absolute;
+  left: -15%;
+  top: -35%;
+}
+
+
 @media (max-width: 1024px) {
   .flyer__title {
     font-size: 26px;
+  }
+}
+@media (max-width: 918px) {
+  .tube {
+    display: none;
+  }
+  .device {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -780,9 +793,26 @@ body {
     font-size: 22px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .flyer__title {
     font-size: 18px;
+    padding: 15px;
+  }
+  .flyer__img{
+    display: flex;
+    justify-content: space-between;
+  }
+  .tube {
+    display: block;
+    position: static;
+    width: 120px;
+    height: 100px;
+  }
+  .device {
+    display: block;
+    position: static;
+    width: 120px;
+    height: 100px; 
   }
 }
 
@@ -1803,6 +1833,8 @@ body {
   }
   .faq__content {
     display: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid #464646;
   }
   .faq__title {
     display: flex;
@@ -1815,6 +1847,7 @@ body {
     text-align: center;
     color: #464646;
     border-bottom: 1px solid #464646;
+    
     height: 65px;
     padding: 0 25px 0 10px;
 
@@ -1862,12 +1895,12 @@ body {
     display: block;
   }
   .inner__content {
-    padding: 5px
-}
-.clients__circle {
-  width: 55px;
-  height: 55px;
-}
+    padding: 5px;
+  }
+  .clients__circle {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 /* ========================================================== masters ====================================================== */
@@ -2281,8 +2314,15 @@ body {
 .variants__cards {
   display: flex;
   justify-content: center;
-}
 
+  position: relative;
+}
+.variants__line {
+  height: 710px;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+}
 .variant__card {
   background: linear-gradient(180deg, #ffffff 0%, #efefef 100%);
   box-shadow: 0px 4px 40px rgba(71, 71, 71, 0.15);
@@ -2426,6 +2466,9 @@ body {
   .variants__cards > *:not(:last-child) {
     margin-bottom: 15px;
   }
+  .variants__line {
+    display: none;
+  }
 }
 @media (max-width: 726px) {
   .variants__cards {
@@ -2524,13 +2567,13 @@ body {
     padding-top: 90px;
   }
   .params__list.params__equipment {
-    max-width: 100%
+    max-width: 100%;
   }
   .params__list.params__equipment {
-    padding: 0px
+    padding: 0px;
   }
   .params__size.params__amount {
-    padding-top: 0px
+    padding-top: 0px;
   }
   .params__list.params__equipment.second {
     padding: 10px 0px;
@@ -2596,8 +2639,8 @@ body {
 
 /* ================================================= calculator ========================================== */
 .calculator {
-  background: url("../img/calculator/calc.png") -40% 90% no-repeat,
-    url("../img/calculator/1.png") 100% 0 / cover no-repeat;
+  background: url("../img/calculator/back.png") center center no-repeat;
+  background-size: cover;
 }
 .calc__body {
   position: relative;
@@ -2677,13 +2720,17 @@ body {
   height: 36px;
   border-radius: 50%;
   border: 10px solid #e03048;
+  outline: 2px solid #fff;
   background: #ffffff;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  position: relative;
+  z-index: 20;
+  transition: all .2s ease-in-out;
 }
 
 .calc__calculator-range .range__input::-webkit-slider-thumb:hover,
 .calc__calculator-range .range__input::-webkit-slider-thumb:active {
+
   border: 8px solid #e03048;
 }
 
@@ -2857,17 +2904,35 @@ body {
     max-width: 280px;
     font-size: 16px;
   }
-  .calc__calculator-footer{
+  .calc__calculator-footer {
     padding: 0 20px;
   }
 }
 /* ======================================================== portrait ========================================================= */
 .portrait {
-  background: url("../img/portrait/back__girl.png") -50% 0 no-repeat,
-    url("../img/portrait/girl__effect.png") -50% 0 no-repeat,
-    url("../img/portrait/background.png") 0 0 / cover no-repeat;
+  background: url("../img/portrait/back.png") center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+/* .portrait__block-top{
+  position:relative;
+  z-index: 5;
+}
+.portrait__img-01{
+  position: absolute;
+  top: -60px;
+  left: -35%;
+  z-index: 1;
+}
+.portrait__img-02{
+  position: absolute;
+  top: -60px;
+  left: -35%;
+  z-index: 1;
+} */
 .portrait__title {
   color: #181818;
   padding-top: 83px;
@@ -3039,8 +3104,8 @@ body {
 /* ============================================= info =================================================== */
 
 .info {
-  background: url("../img/info/info-photo.png") 326% 0 no-repeat,
-    url("../img/info/info-photo02.png") 0 0 no-repeat, #201b16;
+  background: url("../img/portrait/background.png") center center no-repeat;
+  background-size: cover;
 }
 .info__title {
   max-width: 729px;
@@ -3224,7 +3289,7 @@ body {
   }
   .form__title {
     font-size: 18px;
-    padding-top: 25px;
+    padding-top: 15px;
   }
   .form__descr {
     font-size: 16px;
@@ -3264,6 +3329,12 @@ body {
 @media (max-width: 767px) {
   .steps__item {
     margin: 30px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .form__title span{
+    display: block;
+    margin-bottom: -23px;
   }
 }
 
@@ -3444,7 +3515,7 @@ body {
     padding-top: 15px;
     padding-bottom: 20px;
   }
- 
+
   .steps__title {
     font-size: 16px;
   }
@@ -3508,7 +3579,6 @@ body {
   .facts__button-margin {
     padding-bottom: 30px;
   }
-  
 }
 
 @media (max-width: 600px) {
@@ -3556,25 +3626,25 @@ body {
   }
   .facts__descr {
     font-size: 16px;
-}
-.facts__subtitle {
-  padding-top: 15px;
-}
-.facts__list > *:not(:last-child) {
-  padding-bottom: 15px;
-}
-.lifting__descr {
-  font-size: 14px;
-}
-.lifting__list > *:not(:last-child) {
-  padding-right: 5px;
-}
-.item__title-elem img {
-  width: 20px;
-}
-.item__title-elem img {
-  padding-right: 5px;
-}
+  }
+  .facts__subtitle {
+    padding-top: 15px;
+  }
+  .facts__list > *:not(:last-child) {
+    padding-bottom: 15px;
+  }
+  .lifting__descr {
+    font-size: 14px;
+  }
+  .lifting__list > *:not(:last-child) {
+    padding-right: 5px;
+  }
+  .item__title-elem img {
+    width: 20px;
+  }
+  .item__title-elem img {
+    padding-right: 5px;
+  }
   .item__title {
     padding-left: 0px;
   }

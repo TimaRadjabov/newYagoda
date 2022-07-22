@@ -38,9 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalFormThird = document.querySelector(".modal__form-third");
   const modalFormPhone = document.querySelector(".modal__form-phone");
 
-  
-
-
   form.addEventListener("submit", formSend);
   modalFormFirst.addEventListener("submit", firstModalFormSend);
   modalFormSecond.addEventListener("submit", secondModalFormSend);
@@ -51,81 +48,98 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     let error = formValidate(form, "._req");
     if (error === 0) {
-     /*  let response = await fetch("formProcessor.php", {
+      let response = await fetch("formProcessor.php", {
         method: "POST",
         body: formData,
-      }); */
-      let data = new FormData(form); 
+      });
+      let data = new FormData(form);
       localStorage.setItem("nameClient", data.get("name"));
       form.reset();
-      window.location.href =
-          "thanks.html";
-      /* if (response.ok) {
+      window.location.href = "thanks.html";
+      if (response.ok) {
         let result = await response.json();
         console.log(result);
-        
       } else {
         console.log("error");
-      } */
+      }
     }
   }
-  function firstModalFormSend(e) {
+  async function firstModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormFirst, "._first");
-    
 
     if (error === 0) {
-      /*  let response = await fetch("formProcessor.php", {
+      let response = await fetch("formProcessor.php", {
         method: "POST",
         body: formData,
-      }); */
-      let data = new FormData(modalFormFirst); 
+      });
+      let data = new FormData(modalFormFirst);
       localStorage.setItem("nameClient", data.get("name"));
       modalFormFirst.reset();
-      window.location.href =
-          "thanks.html";
+      window.location.href = "thanks.html";
+      if (response.ok) {
+        let result = await response.json();
+        console.log(result);
+      } else {
+        console.log("error");
+      }
     }
   }
-  function secondModalFormSend(e) {
+  async function secondModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormSecond, "._second");
     if (error === 0) {
-      /*  let response = await fetch("formProcessor.php", {
+      let response = await fetch("formProcessor.php", {
         method: "POST",
         body: formData,
-      }); */
-      
-      let data = new FormData(modalFormSecond); 
+      });
+
+      let data = new FormData(modalFormSecond);
       localStorage.setItem("nameClient", data.get("name"));
       modalFormSecond.reset();
-      window.location.href =
-          "thanks.html";
+      window.location.href = "thanks.html";
+      if (response.ok) {
+        let result = await response.json();
+        console.log(result);
+      } else {
+        console.log("error");
+      }
     }
   }
-  function thirdModalFormSend(e) {
+  async function thirdModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormThird, "._third");
     if (error === 0) {
-      /*  let response = await fetch("formProcessor.php", {
+      let response = await fetch("formProcessor.php", {
         method: "POST",
         body: formData,
-      }); */
-      let data = new FormData(modalFormThird); 
+      });
+      let data = new FormData(modalFormThird);
       localStorage.setItem("nameClient", data.get("name"));
       modalFormThird.reset();
-      window.location.href =
-          "thanks.html";
+      window.location.href = "thanks.html";
+      if (response.ok) {
+        let result = await response.json();
+        console.log(result);
+      } else {
+        console.log("error");
+      }
     }
   }
-  function phoneModalFormSend(e) {
+  async function phoneModalFormSend(e) {
     e.preventDefault();
     let error = formValidate(modalFormPhone, "._phoneI");
     if (error === 0) {
-      let data = new FormData(modalFormPhone); 
+      let data = new FormData(modalFormPhone);
       localStorage.setItem("nameClient", data.get("name"));
       modalFormPhone.reset();
-      window.location.href =
-          "thanks.html";
+      window.location.href = "thanks.html";
+      if (response.ok) {
+        let result = await response.json();
+        console.log(result);
+      } else {
+        console.log("error");
+      }
     }
   }
 
@@ -159,6 +173,4 @@ document.addEventListener("DOMContentLoaded", function () {
   function emailTest(input) {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
-
-
 });

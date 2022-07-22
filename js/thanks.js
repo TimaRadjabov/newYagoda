@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", function(){
    })
    let nameClient = localStorage.getItem('nameClient');
    clientId.innerHTML = nameClient + ',';
-   document.title = nameClient + " спасибо! Ваша заявка принята";
+   document.title = nameClient + ", спасибо! Ваша заявка принята";
 })
