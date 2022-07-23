@@ -4,7 +4,7 @@ if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUE
 }
 // Pre settings
 define("SND_FROM", "info@росфранчайзинг.рф");
-define("SND_TO", "oidareng@yandex.ru"); // allowble comma-sepparated values
+define("SND_TO", "info@yagoda.me"); // allowble comma-sepparated values
 define("SND_NAME", "Yagoda");
 define("NAME_FRANCH", "Yagoda");
 define("SMTP", false); // see settings in Helper.php before you change this const

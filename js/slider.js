@@ -50,12 +50,90 @@ const activeDot= n =>{
 			activeSlide(index)
 		})
 	})
+
+
+	const mastersSlider=document.querySelectorAll('.masters__slider-list'),
+    phoneSliders=document.querySelectorAll('.masters__phone-list'),
+    nextBtn=document.querySelector('.masters__next'),
+    backBtn=document.querySelector('.masters__back'),
+    phoneNextBtn=document.querySelector('.masters__next-phone'),
+    phoneBackBtn=document.querySelector('.masters__back-phone')
+
+    let num=0;
+
+const activeMastersSlide= n =>{
+  
+  for(let masterSlide of mastersSlider){
+    masterSlide.classList.remove('masters-active')
+  }
+  mastersSlider[n].classList.add('masters-active');
+  mastersSlider[n].style.opacity = 0;
+  setTimeout(() => mastersSlider[n].style.opacity = 1, 200)
+}
+
+const activePhoneSlide= n =>{
+  
+  for(let phoneSlide of phoneSliders){
+    phoneSlide.classList.remove('masters-active')
+  }
+  phoneSliders[n].classList.add('masters-active');
+  phoneSliders[n].style.opacity = 0;
+  setTimeout(() => phoneSliders[n].style.opacity = 1, 200)
+}
+
+const nextMasterSlide=()=>{
+  if(num==mastersSlider.length-1){
+    num=0;
+    activeMastersSlide(num)
+  }else{
+    num++;
+    activeMastersSlide(num)
+  }
+}
+
+const prevMastersSlide=()=>{
+  if(num==0){
+    num=mastersSlider.length-1;
+    activeMastersSlide(num)
+  }else{
+    num--;
+    activeMastersSlide(num)
+  }
+}
+
+const nextPhoneSlide=()=>{
+  if(num==phoneSliders.length-1){
+    num=0;
+    activePhoneSlide(num)
+  }else{
+    num++;
+    activePhoneSlide(num)
+  }
+}
+
+const prevPhoneSlide=()=>{
+  if(num==0){
+    num=phoneSliders.length-1;
+    activePhoneSlide(num)
+  }else{
+    num--;
+    activePhoneSlide(num)
+  }
+}
+
+phoneNextBtn.addEventListener('click', nextPhoneSlide);
+phoneBackBtn.addEventListener('click', prevPhoneSlide);
+backBtn.addEventListener('click', prevMastersSlide);
+nextBtn.addEventListener('click', nextMasterSlide);
 	// touch
 
 const sliderTrack= document.querySelector('.slider-track');
+const mastersTrack=document.querySelector('.masters__phone-track');
 
 sliderTrack.addEventListener('touchstart', handleTouchStart, false);
 sliderTrack.addEventListener('touchmove', handleTouchMove, false);
+mastersTrack.addEventListener('touchstart', handleTouchStart, false);
+mastersTrack.addEventListener('touchmove', handleTouchMove, false);
 
 
 
@@ -84,11 +162,19 @@ function handleTouchMove(event){
   if(Math.abs(xDiff)>Math.abs(yDiff)){
     // r-l
     if(xDiff>0) {
-      prevSlide();
+     	prevSlide();
+		prevPhoneSlide();
+		console.log(xDiff)
     }else{
       nextSlide();
+		nextPhoneSlide();
+		console.log('l')
     }
   }
   x1=null;
    y1=null;
 }
+
+
+
+
