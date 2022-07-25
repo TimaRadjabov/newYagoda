@@ -65,7 +65,64 @@ body {
   position: relative;
   z-index: 5;
   cursor: pointer;
+  overflow: hidden;
 }
+.main__button::after {
+  content: "";
+  margin-left: 60px;
+  width: 25px;
+  height: 300px;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#fff),
+    to(rgba(255, 255, 255, 0.01))
+  );
+  background: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.01));
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+  position: absolute;
+  left: -90px;
+  top: -150px;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation-name: slideme;
+  animation-name: slideme;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+@-webkit-keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0;
+  }
+  30%,
+  to {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
+@keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0;
+  }
+  30%,
+  to {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
+
 .main__button:hover {
   background: linear-gradient(93.74deg, #f37788 0%, #e03048 100%);
 }
@@ -85,6 +142,21 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45px;
+  transform: skewX(-45deg);
+  left: -150%;
+  background: linear-gradient(
+    90deg,
+    RGBA(255, 255, 255, 0.12),
+    RGBA(255, 255, 255, 0.87)
+  );
+}
+
 @media (max-width: 600px) {
   .btn {
     font-size: 16px;
@@ -2045,14 +2117,14 @@ body {
     top: 43%;
     cursor: pointer;
   }
-  .click{
+  .click {
     width: 12px;
     height: 12px;
     border-bottom: 3px solid #222;
     border-right: 3px solid #222;
     transform: rotate(-45deg);
   }
-  .left-click{
+  .left-click {
     width: 12px;
     height: 12px;
     border-bottom: 3px solid #222;
@@ -2135,7 +2207,7 @@ body {
 @media (max-width: 1166px) {
   .masters__slider-flex {
     justify-content: center;
-}
+  }
   .masters__card {
     padding: 20px 20px 30px 40px;
   }
@@ -2196,7 +2268,7 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .masters__card{
+  .masters__card {
     min-height: 450px;
   }
   .card__title {
@@ -2224,29 +2296,29 @@ body {
     background: none;
   }
 
-  .click{
+  .click {
     cursor: pointer;
     padding: 5px;
     border-bottom: 3px solid #efefef;
     border-right: 3px solid #efefef;
-    transition: all .1s ease-in;
+    transition: all 0.1s ease-in;
   }
-  .left-click{
+  .left-click {
     cursor: pointer;
     padding: 5px;
     border-bottom: 3px solid #efefef;
     border-left: 3px solid #efefef;
-    transition: all .1s ease-in;
+    transition: all 0.1s ease-in;
   }
-  .click:hover{
+  .click:hover {
     border-bottom: 3px solid #242424;
     border-right: 3px solid #242424;
-    transition: all .1s ease-in;
+    transition: all 0.1s ease-in;
   }
-  .left-click:hover{
+  .left-click:hover {
     border-bottom: 3px solid #242424;
     border-left: 3px solid #242424;
-    transition: all .1s ease-in;
+    transition: all 0.1s ease-in;
   }
 }
 
@@ -2480,7 +2552,7 @@ body {
   height: 710px;
   position: absolute;
   top: 7%;
-  left: 50%;
+  left: 49.9%;
 }
 .variant__card {
   background: linear-gradient(180deg, #ffffff 0%, #efefef 100%);

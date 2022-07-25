@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/thanks.css" />
@@ -17,7 +23,7 @@
   </head>
   <body>
     <div class="wrapper thanks__wrapper">
-      <header class="header">
+      <header class="header wow animate__fadeInDown">
         <div class="container">
           <div class="header__body">
             <div class="header__logo logo">
@@ -57,13 +63,13 @@
         <div class="thanks__body">
           <div class="container">
 				<div class="thanks__container">
-					<h1 class="thanks__title title">
+					<h1 class="thanks__title title wow animate__fadeInLeft">
 						<span id="formName">[Имя],</span> благодарим Вас за обращение в компанию Yagoda©
 					 </h1>
-					 <p class="thanks__descr">
+					 <p class="thanks__descr wow animate__fadeInLeft">
 						Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
 					 </p>
-					 <div class="thanks__work">
+					 <div class="thanks__work wow animate__fadeInLeft">
 						<div class="working__block">
               <div class="working__graphs">
                 <div class="graphs__item">
@@ -90,22 +96,22 @@
 						</div>
 					 </div>
 					 
-           <div class="thanks__text">
+           <div class="thanks__text wow animate__fadeInLeft">
 						Если Вы оставили заявку в нерабочее время или в выходной/праздничный	
 						день — мы перезвоним Вам в ближайший рабочий день.
 					 </div>
-					 <div class="thanks__subtitle">
+					 <div class="thanks__subtitle wow animate__fadeInLeft">
 						А пока ближе познакомьтесь с командой
 					 </div>
-					 <div class="thanks__work socials">
+					 <div class="thanks__work socials wow animate__fadeInLeft">
 						<div class="socials__text">О жизни проекта в соц.сетях:</div>
 						<div class="thanks__socials">
 						  <a href="https://vk.com/yagoda.studio" target="_blank"><img src="./img/thanks/icon-vk.svg" alt="vk" /></a>
 						  <a href="https://ok.ru/group/57890757345300" target="_blank"><img src="./img/thanks/icon-ok.svg" alt="ok" /></a>
 						</div>
 					 </div>
-					 <div class="thanks__subtitle clients">Отзывы клиентов:</div>
-					 <div class="thanks__webs">
+					 <div class="thanks__subtitle clients wow animate__fadeInLeft">Отзывы клиентов:</div>
+					 <div class="thanks__webs wow animate__fadeInDown">
 						<div class="webs__item">
 						  <a href="https://yandex.ru/maps/org/yagoda/235242013141/reviews/?ll=30.380277%2C59.946680&z=15" target="_blank"><img
 							 src="./img/thanks/yandex.png"
@@ -119,11 +125,11 @@
 						  <div class="webs__text"><a href="https://2gis.ru/spb/branches/70000001040964660/firm/70000001054313526/30.342518%2C59.957803/tab/reviews?m=30.401449%2C59.942234%2F14.47" target="_blank">2gis</a></div>
 						</div>
 					 </div>
-					 <div class="thanks__subscribe">
+					 <div class="thanks__subscribe wow animate__fadeInDown">
 						Сохраним Вашу молодость и красоту надолго с помощью максимально
 						экологичных методов и с учётом современного ритма жизни в мегаполисе
 					 </div>
-					 <div class="btn__padding">
+					 <div class="btn__padding wow animate__fadeInDown">
             <div class="button__container thanks__button-container">
               <div class="main__button" id="back">
                  <button class="btn"> Вернуться на основную страницу</button>
@@ -134,7 +140,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer wow animate__fadeInDown">
       <div class="container">
         <div class="footer__body">
           <div class="footer__first-block">
@@ -221,5 +227,9 @@
       src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
       id="yamapsapi-js"
     ></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
