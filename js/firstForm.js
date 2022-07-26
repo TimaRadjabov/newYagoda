@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".form__body");
+  const modalFormFirst = document.querySelector(".modal__form-first");
+  modalFormFirst.addEventListener("submit", firstModalFormSend);
 
-  form.addEventListener("submit", formSend);
-
-  async function formSend(e) {
+  async function firstModalFormSend(e) {
     e.preventDefault();
-    let error = formValidate(form, "_req");
+    let error = formValidate(modalFormFirst, "_first");
 
-    let formData = new FormData(form);
+    let formData = new FormData(modalFormFirst);
     if (error === 0) {
       let response = await fetch("php/formProcessor.php", {
         method: "POST",
@@ -15,12 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       if (response.ok) {
         localStorage.setItem("nameClient", formData.get("name"));
-        form.reset();
+        modalFormFirst.reset();
         window.location.href = "thanks.html";
       }
     }
   }
-
   function formValidate(form, className) {
     let error = 0;
     let formReq = document.getElementsByClassName(className);

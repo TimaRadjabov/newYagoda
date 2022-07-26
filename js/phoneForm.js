@@ -1,13 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".form__body");
+  const modalFormPhone = document.querySelector(".modal__form-phone");
+  modalFormPhone.addEventListener("submit", phoneModalFormSend);
 
-  form.addEventListener("submit", formSend);
-
-  async function formSend(e) {
+  async function phoneModalFormSend(e) {
     e.preventDefault();
-    let error = formValidate(form, "_req");
-
-    let formData = new FormData(form);
+    let error = formValidate(modalFormPhone, "_phoneI");
+    let formData = new FormData(modalFormPhone);
     if (error === 0) {
       let response = await fetch("php/formProcessor.php", {
         method: "POST",
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       if (response.ok) {
         localStorage.setItem("nameClient", formData.get("name"));
-        form.reset();
+        modalFormPhone.reset();
         window.location.href = "thanks.html";
       }
     }

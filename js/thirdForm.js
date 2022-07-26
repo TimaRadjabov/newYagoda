@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".form__body");
+  const modalFormThird = document.querySelector(".modal__form-third");
+  modalFormThird.addEventListener("submit", thirdModalFormSend);
 
-  form.addEventListener("submit", formSend);
-
-  async function formSend(e) {
+  async function thirdModalFormSend(e) {
     e.preventDefault();
-    let error = formValidate(form, "_req");
+    let error = formValidate(modalFormThird, "_third");
 
-    let formData = new FormData(form);
+    let formData = new FormData(modalFormThird);
     if (error === 0) {
       let response = await fetch("php/formProcessor.php", {
         method: "POST",
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       if (response.ok) {
         localStorage.setItem("nameClient", formData.get("name"));
-        form.reset();
+        modalFormThird.reset();
         window.location.href = "thanks.html";
       }
     }
