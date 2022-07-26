@@ -86,7 +86,7 @@
   max-width: 380px;
 }
 .form__button {
-  max-width: 380px;
+  width: 100%;
   padding: 26px 71px;
   box-shadow: none;
 }
